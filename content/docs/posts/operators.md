@@ -1,6 +1,6 @@
 ---
-title: "Operatörler - Operators"
-weight: 6
+title: "10. Operatörler - Operators"
+weight: 10
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -9,4 +9,7 @@ weight: 6
 # bookSearchExclude: false
 ---
 
-# Operatörler - Operatörs
+# Operatörler - Operators
+
+
+![caution](/img/caution.jpeg)

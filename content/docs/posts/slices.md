@@ -1,6 +1,6 @@
 ---
-title: "Dilimler - Slices "
-weight: 7
+title: "9. Dilimler - Slices "
+weight: 9
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -10,3 +10,5 @@ weight: 7
 ---
 
 # Dilimler (Slices)
+
+![caution](/img/caution.jpeg)

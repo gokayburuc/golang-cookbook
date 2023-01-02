@@ -1,6 +1,6 @@
 ---
-title: "Fonksiyonlar (Functions)"
-weight: 6
+title: "11. Fonksiyonlar (Functions)"
+weight: 11
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

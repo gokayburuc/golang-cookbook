@@ -1,6 +1,6 @@
 ---
-title: "Veri Tipleri (Data Types) "
-weight: 1
+title: "6. Veri Tipleri (Data Types) "
+weight: 6
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

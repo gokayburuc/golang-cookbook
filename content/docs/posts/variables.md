@@ -1,6 +1,6 @@
 ---
-title: "Değişkenler (Variables)"
-weight: 2
+title: "5. Değişkenler (Variables)"
+weight: 5
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

@@ -1,6 +1,6 @@
 ---
-title: "Diziler - Arrays"
-weight: 6
+title: "8. Diziler - Arrays"
+weight: 8
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -11,3 +11,4 @@ weight: 6
 
 # Diziler (Arrays)
 
+![caution](/img/caution.jpeg)

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sabitler (Constants) Constant ifadeler sabitler olarak bilinirler. Değişken ifadelerinden farklı olarak, bir defa değer atandığı an itibariyle sistemde sabit kalırlar. İşleme tabi tutulsalar dahi, işlem bitişinde yine değerleri sabit olmaktadır.
+Yazım Biçimi - Snytax const ifade = deger HATIRLATMA: const ifadeleri scope içinde ve dışında tanımlanabilir.  const İfadelerin Veri Türleri const ifadeler aşağıda yer alan tüm veri tiplerinde veri taşıyabilirler.
+ Integer - int Float - float32, float64 vs. String - string Boolean - bool Character - tek bir karakter  const İfadelerin Kullanımı GeeksForGeeks web sitesinden alınan örnek ifade aşağıda verilmiştir.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Sabitler (Constants)" />
+<meta property="og:description" content="Sabitler (Constants) Constant ifadeler sabitler olarak bilinirler. Değişken ifadelerinden farklı olarak, bir defa değer atandığı an itibariyle sistemde sabit kalırlar. İşleme tabi tutulsalar dahi, işlem bitişinde yine değerleri sabit olmaktadır.
+Yazım Biçimi - Snytax const ifade = deger HATIRLATMA: const ifadeleri scope içinde ve dışında tanımlanabilir.  const İfadelerin Veri Türleri const ifadeler aşağıda yer alan tüm veri tiplerinde veri taşıyabilirler.
+ Integer - int Float - float32, float64 vs. String - string Boolean - bool Character - tek bir karakter  const İfadelerin Kullanımı GeeksForGeeks web sitesinden alınan örnek ifade aşağıda verilmiştir." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/posts/constants/" />
+
+<title>Sabitler (Constants) | Golang Cookbook by GOKAYBURUC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2d9ad00dc8025c6dba3558ad355da7dcfa650c2fbfaccea13436ffa1c3e6aab3.js" integrity="sha256-LZrQDcgCXG26NVitNV2n3PplDC&#43;/rM6hNDb/ocPmqrM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/golang_logo_icon.png" alt="Logo" /><span>Golang Cookbook by GOKAYBURUC</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/hello-world/" class="">Hello World Uygulaması </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="">Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/variables/" class="">Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="active">Sabitler (Constants)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/switch-case/" class="">Anahtar Durum İfadeleri (Switch Case )</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/arrays/" class="">Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/loops/" class="">Döngüler (Loops)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/functions/" class="">Fonksiyonlar (Functions)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/operators/" class="">Operatörler - Operators</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/conditionals/" class="">Şartlı İfadeler (If - Else Conditionals)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">Dilimler - Slices </a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Sabitler (Constants)</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#yazım-biçimi---snytax">Yazım Biçimi - Snytax</a></li>
+    <li><a href="#const-ifadelerin-veri-türleri">const İfadelerin Veri Türleri</a>
+      <ul>
+        <li><a href="#const-ifadelerin-kullanımı">const İfadelerin Kullanımı</a></li>
+      </ul>
+    </li>
+    <li><a href="#yazılı-ve-yazılı-olmayan-sabitlere-ait-örnek-uygulama">Yazılı ve Yazılı Olmayan Sabitlere Ait Örnek Uygulama</a></li>
+    <li><a href="#tip-dönüşümü">Tip Dönüşümü</a></li>
+    <li><a href="#sabit-türleri">Sabit Türleri</a>
+      <ul>
+        <li><a href="#metin-sabitleri">Metin Sabitleri</a></li>
+        <li><a href="#boolean-sabitleri">Boolean Sabitleri</a></li>
+        <li><a href="#tamsayı-integer-sabitleri">Tamsayı (Integer) Sabitleri</a></li>
+        <li><a href="#ondalık-float-sabitleri">Ondalık (Float) Sabitleri</a></li>
+        <li><a href="#kompleks-sayı-complex-sabitleri">Kompleks Sayı (Complex) Sabitleri</a></li>
+      </ul>
+    </li>
+    <li><a href="#tip-tanımlama---type-definition">Tip Tanımlama - Type Definition</a>
+      <ul>
+        <li><a href="#kaynakça">Kaynakça</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="sabitler-constants">Sabitler (Constants)</h1>
+<p>Constant ifadeler sabitler olarak bilinirler.  <strong>Değişken ifadelerinden farklı olarak, bir defa değer atandığı an itibariyle sistemde sabit kalırlar.</strong>  İşleme tabi tutulsalar dahi, işlem bitişinde yine değerleri sabit olmaktadır.</p>
+<h2 id="yazım-biçimi---snytax">Yazım Biçimi - Snytax</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ifade</span> = <span style="color:#a6e22e">deger</span>
+</code></pre></div><blockquote class="book-hint warning">
+  HATIRLATMA:
+<code>const</code> ifadeleri <code>scope</code> içinde ve dışında tanımlanabilir.
+</blockquote>
+
+<h2 id="const-ifadelerin-veri-türleri">const İfadelerin Veri Türleri</h2>
+<p><code>const</code> ifadeler aşağıda yer alan tüm veri tiplerinde veri taşıyabilirler.</p>
+<ul>
+<li>Integer - int</li>
+<li>Float - float32, float64 vs.</li>
+<li>String - string</li>
+<li>Boolean - bool</li>
+<li>Character - tek bir karakter</li>
+</ul>
+<h3 id="const-ifadelerin-kullanımı">const İfadelerin Kullanımı</h3>
+<p><a href="https://www.geeksforgeeks.org/constants-go-language/">GeeksForGeeks</a> web sitesinden alınan örnek ifade aşağıda verilmiştir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PI</span> = <span style="color:#ae81ff">3.14</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()
+{
+	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">GFG</span> = <span style="color:#e6db74">&#34;GeeksforGeeks&#34;</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>, <span style="color:#a6e22e">GFG</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Happy&#34;</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#e6db74">&#34;Day&#34;</span>)
+
+	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Correct</span>= <span style="color:#66d9ef">true</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Go rules?&#34;</span>, <span style="color:#a6e22e">Correct</span>)
+}
+
+</code></pre></div><p>ifadede görüldüğü üzere <code>PI</code> isimli <code>float</code> bir sabit değer tanımlanmıştır. Burada dikkat etmemiz gereken nokta <code>const</code> ifadelerinin <code>scope</code> (fonksiyon tanımlanan aralık) dışında da tanımlanabildiğidir.</p>
+<h4 id="yazılmamış-untyped-ve-yazılı-typed-sayısal-sabitler">Yazılmamış (Untyped) ve Yazılı (Typed) Sayısal Sabitler:</h4>
+<p>Yazılan sabitler (<em>typed constants</em>), sabitlenmiş değişkenler gibi çalışır, yalnızca aynı türle birlikte çalışabilir ve tür bilgisi yazılmamış sabitler (<em>untyped constants</em>), değişmezler gibi çalışır, benzer türlerle birlikte çalışabilir.</p>
+<blockquote>
+<p>Sabitler (constants), Go&rsquo;da bir türle veya türsüz olarak bildirilebilir.</p>
+</blockquote>
+<p>Aşağıda, hem <code>typed</code> hem de <code>untyped</code> biçimde belirtilmiş ifadeler örneklenmiştir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#75715e">//veri tipi belirtilmemiş
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">untypedInteger</span>             = <span style="color:#ae81ff">123</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">untypedFloating</span>            = <span style="color:#ae81ff">123.12</span>
+
+<span style="color:#75715e">//veri tipi belirtilmiş
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">typedInteger</span>  <span style="color:#66d9ef">int</span>             = <span style="color:#ae81ff">123</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">typedFloatingPoint</span>   <span style="color:#66d9ef">float64</span>  = <span style="color:#ae81ff">123.12</span>
+</code></pre></div><h2 id="yazılı-ve-yazılı-olmayan-sabitlere-ait-örnek-uygulama">Yazılı ve Yazılı Olmayan Sabitlere Ait Örnek Uygulama</h2>
+<p>Aşağıda belirli sabitler tanımlanmıştır ve bu sabitlerle rastgele işlemler yapılmıştır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Pi</span> = <span style="color:#ae81ff">3.14</span> <span style="color:#75715e">// untyped 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Euro</span> <span style="color:#66d9ef">float32</span> = <span style="color:#ae81ff">18.78</span> <span style="color:#75715e">// typed 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yil</span> = <span style="color:#ae81ff">2022</span> <span style="color:#75715e">// untyped 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">kurulus</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1923</span> <span style="color:#75715e">//typed
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+<span style="color:#a6e22e">test</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Euro</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">yil</span> <span style="color:#75715e">// tanımli sabit Euro ile tanımsiz sabit yil carpiliyor
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">test2</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pi</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">Euro</span> <span style="color:#75715e">// tanımli sabit Euro ile tanımsız sabit Pi carpiliyor
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">test3</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Pi</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">yil</span> <span style="color:#75715e">// tanımsız sabit pi ile tanımsız sabit yil carpiliyor
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/* a
+</span><span style="color:#75715e">test3 := kurulus * Euro
+</span><span style="color:#75715e">yukarıdaki ifade hata verecektir
+</span><span style="color:#75715e">cünkü kurulus tanımlı sabit Euro da tanımlı sabittir 
+</span><span style="color:#75715e">ve veri tipleri farklıdır. tip dönüşümü gerekmektedir.
+</span><span style="color:#75715e">kurulus int degerini float32 &#39;ye cevirerek isleme sokabiliriz.*/</span> 
+
+<span style="color:#a6e22e">test4</span> <span style="color:#f92672">:=</span> float32(<span style="color:#a6e22e">kurulus</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">Euro</span>
+
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">test</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">test2</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">test3</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">test4</span>)
+
+}
+</code></pre></div><h2 id="tip-dönüşümü">Tip Dönüşümü</h2>
+<p>İfademizde notları incelediyseniz tanımlama sırasında bir noktada tip dönüşümü yaptık. Bunun sebebi ise bu değerin tip tanımlı bir sabit olmasıdır. Bu sebepten dolayı GO otomatik olarak uygun değere çeviremez ve yeniden tip elle tip tanımlaması yapmamız gerekir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// tip dönüşümü
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">test4</span> <span style="color:#f92672">:=</span> float32(<span style="color:#a6e22e">kurulus</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">Euro</span> <span style="color:#75715e">//int veri tipini float32 veri tipine cevirdik
+</span></code></pre></div><h2 id="sabit-türleri">Sabit Türleri</h2>
+<p>GOLANG içerisinde sabit türleri çeşitli olmakla birlikte temel başlıklar altında toplanabilir.</p>
+<ol>
+<li>Metin Sabitleri  -  String Literals</li>
+<li>Sayısal Sabitler - (Integer, Float , Complex )</li>
+<li>Boolean Sabitleri</li>
+</ol>
+<h3 id="metin-sabitleri">Metin Sabitleri</h3>
+<ul>
+<li>Go, iki tür değişmez <code>string</code>yi destekler, yani ” ” (çift tırnak stili) ve ' &lsquo;(geri alıntı).</li>
+<li><code>string</code> ifadeler + ve += operatörleriyle birleştirilebilir.</li>
+<li>Bir <code>string</code>, karakter değişmezlerine benzer karakterler içerir: düz karakterler (plain characters), kaçış dizileri (escape sequences ) ve evrensel karakterler (universal characters). Ve bu, yazılmamış karakterlerdendir.</li>
+<li><code>string</code> türlerinin sıfır değerleri, değişmez olarak ” ” veya ” ile gösterilebilen boş <code>string</code>lerdir.</li>
+<li><code>string</code> türlerinin tümü, == (equal) , != (not equal) ve (aynı türlerin karşılaştırılması için) gibi operatörler kullanılarak karşılaştırılabilir.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()
+
+{
+	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">A</span> = <span style="color:#e6db74">&#34;GOKAYBURUC.DEV&#34;</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">B</span> = <span style="color:#e6db74">&#34;Medium Blog Page&#34;</span>
+	
+	<span style="color:#75715e">// Concat strings. - String ifadelerin birleştirilmesi 
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">karsilama</span> = <span style="color:#a6e22e">A</span><span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">B</span>
+	<span style="color:#a6e22e">karsilama</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;!&#34;</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">karsilama</span>)
+	
+	<span style="color:#75715e">// Compare strings. - String ifadelerin karşılaştırılması
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">A</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GOKAYBURUC&#34;</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">B</span> &lt; <span style="color:#a6e22e">A</span>)
+}
+
+</code></pre></div><h3 id="boolean-sabitleri">Boolean Sabitleri</h3>
+<p><code>true</code> ve <code>false</code> değeri alan sabitlerdir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Pi</span> = <span style="color:#ae81ff">3.14</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>()
+{
+	<span style="color:#75715e">// degeri true olan bir const tanımladık
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">trueConst</span> = <span style="color:#66d9ef">true</span>
+	
+	<span style="color:#75715e">// Type definition using type keyword - Veri Tipi Tanımlama
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myBool</span> <span style="color:#66d9ef">bool</span>
+
+	<span style="color:#75715e">// const ifadeyi bir değişkene atadık
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">defaultBool</span> = <span style="color:#a6e22e">trueConst</span> <span style="color:#75715e">// izin verilir
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">customBool</span> <span style="color:#a6e22e">myBool</span> = <span style="color:#a6e22e">trueConst</span> <span style="color:#75715e">// izin verilir
+</span><span style="color:#75715e"></span>	
+	<span style="color:#75715e">// defaultBool = customBool //  izin verilmez
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">defaultBool</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">customBool</span>)
+}
+
+</code></pre></div><h3 id="tamsayı-integer-sabitleri">Tamsayı (Integer) Sabitleri</h3>
+<p>Tamsayı integer sabitleri çeşitli değişkenlik göstermektedir.</p>
+<p>Burada sayı yazılımları :</p>
+<ul>
+<li>Decimal : Ondalık ( 10 luk sayı sistemi )</li>
+<li>Octal  : Sekizlik ( 8 &lsquo;lik sayı sistemi )</li>
+<li>Hexadecimal : On altılık (16&rsquo;lık sayı sistemi)</li>
+<li>Int : Tamsayı</li>
+<li>Unsigned Int :  İmzasız integer</li>
+<li>Long : Uzun veri tipi  - C Kökenli bir veri tipidir. ( 2^64 ifadesini getirir)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">85</span>         <span style="color:#75715e">/* decimal */</span>
+<span style="color:#ae81ff">0213</span>       <span style="color:#75715e">/* octal */</span>
+<span style="color:#ae81ff">0x4b</span>       <span style="color:#75715e">/* hexadecimal */</span>
+<span style="color:#ae81ff">30</span>         <span style="color:#75715e">/* int */</span>
+<span style="color:#ae81ff">30</span><span style="color:#a6e22e">u</span>        <span style="color:#75715e">/* unsigned int */</span>
+<span style="color:#ae81ff">30</span><span style="color:#a6e22e">l</span>        <span style="color:#75715e">/* long */</span>
+<span style="color:#ae81ff">30</span><span style="color:#a6e22e">ul</span>       <span style="color:#75715e">/* unsigned long */</span>
+<span style="color:#ae81ff">212</span>         <span style="color:#75715e">/* Legal */</span>
+<span style="color:#ae81ff">215</span><span style="color:#a6e22e">u</span>        <span style="color:#75715e">/* Legal */</span>
+<span style="color:#ae81ff">0xFee</span><span style="color:#a6e22e">L</span>      <span style="color:#75715e">/* Legal */</span>
+<span style="color:#ae81ff">07</span><span style="color:#ae81ff">8</span>         <span style="color:#75715e">/* Illegal: 8 is not an octal digit */</span>
+<span style="color:#ae81ff">032</span><span style="color:#a6e22e">UU</span>       <span style="color:#75715e">/* Illegal: cannot repeat a suffix */</span>
+</code></pre></div><p>Örnek ifademizi tanımlayalım.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ekmek</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">5</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+<span style="color:#75715e">//const ekmek = 5
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sepet</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">30</span>
+<span style="color:#a6e22e">yarimSepet</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sepet</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+<span style="color:#a6e22e">yarimEkmek</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ekmek</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">yarimEkmek</span>)
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">yarimSepet</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">ekmek</span>)
+
+<span style="color:#75715e">// bu ifade hata verecektir. sabit bir deger ikinci bir atama kabul etmez
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">ekmek</span> = <span style="color:#a6e22e">ekmek</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">ekmek</span>)
+
+}
+</code></pre></div><h3 id="ondalık-float-sabitleri">Ondalık (Float) Sabitleri</h3>
+<p>Ondalık sabitler olarak tanımlanır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">3.14159</span>       <span style="color:#75715e">/* Legal */</span>
+<span style="color:#ae81ff">314159E-5</span><span style="color:#a6e22e">L</span>    <span style="color:#75715e">/* Legal */</span>
+<span style="color:#ae81ff">510</span><span style="color:#a6e22e">E</span>          <span style="color:#75715e">/* Illegal: incomplete exponent */</span>
+<span style="color:#ae81ff">210</span><span style="color:#a6e22e">f</span>          <span style="color:#75715e">/* Illegal: no decimal or exponent */</span>
+.<span style="color:#a6e22e">e55</span>          <span style="color:#75715e">/* Illegal: missing integer or fraction */</span>
+</code></pre></div><h3 id="kompleks-sayı-complex-sabitleri">Kompleks Sayı (Complex) Sabitleri</h3>
+<p>2 değerle tanımlanan komplex sayılar için kullanılır. Aşağıdaki iki tanımlama da geçerli bir tanımlamadır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ilk</span> = (<span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">0.0</span>) 
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sinirlar</span> = (<span style="color:#f92672">-</span><span style="color:#ae81ff">123.456E+30</span>, <span style="color:#ae81ff">987.654E-29</span>)
+</code></pre></div><h2 id="tip-tanımlama---type-definition">Tip Tanımlama - Type Definition</h2>
+<p>Type Definition (Tip Tanımlama): GOLANG içinde eğer yeni bir tip tanımlamak istiyorsanız</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">//type tipAdı veriTürü
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">benimVeriTipim</span> <span style="color:#66d9ef">string</span>
+</code></pre></div><p>sentaks değerini izlersiniz.</p>
+<h3 id="kaynakça">Kaynakça</h3>
+<ol>
+<li><a href="https://go.dev/tour/basics/15">https://go.dev/tour/basics/15</a></li>
+<li><a href="https://www.geeksforgeeks.org/constants-go-language/">https://www.geeksforgeeks.org/constants-go-language/</a></li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#yazım-biçimi---snytax">Yazım Biçimi - Snytax</a></li>
+    <li><a href="#const-ifadelerin-veri-türleri">const İfadelerin Veri Türleri</a>
+      <ul>
+        <li><a href="#const-ifadelerin-kullanımı">const İfadelerin Kullanımı</a></li>
+      </ul>
+    </li>
+    <li><a href="#yazılı-ve-yazılı-olmayan-sabitlere-ait-örnek-uygulama">Yazılı ve Yazılı Olmayan Sabitlere Ait Örnek Uygulama</a></li>
+    <li><a href="#tip-dönüşümü">Tip Dönüşümü</a></li>
+    <li><a href="#sabit-türleri">Sabit Türleri</a>
+      <ul>
+        <li><a href="#metin-sabitleri">Metin Sabitleri</a></li>
+        <li><a href="#boolean-sabitleri">Boolean Sabitleri</a></li>
+        <li><a href="#tamsayı-integer-sabitleri">Tamsayı (Integer) Sabitleri</a></li>
+        <li><a href="#ondalık-float-sabitleri">Ondalık (Float) Sabitleri</a></li>
+        <li><a href="#kompleks-sayı-complex-sabitleri">Kompleks Sayı (Complex) Sabitleri</a></li>
+      </ul>
+    </li>
+    <li><a href="#tip-tanımlama---type-definition">Tip Tanımlama - Type Definition</a>
+      <ul>
+        <li><a href="#kaynakça">Kaynakça</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

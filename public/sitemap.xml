@@ -3,7 +3,119 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/docs/posts/hello-world/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/data-types/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/variables/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/constants/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/switch-case/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/closures/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/arrays/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/loops/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/functions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/operators/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/conditionals/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/slices/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/channels/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/generics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/goroutines/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/importpackage/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/interfaces/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/maps/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/methods/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/modules/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/packages/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/pointers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/ranges/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/recursions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/structs/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/variadic-functions/</loc>
+  </url>
+  
+  <url>
     <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/</loc>
   </url>
   
   <url>

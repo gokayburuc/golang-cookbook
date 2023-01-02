@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GO Dilinde Veri Tipleri (Data Types in GO) GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.
+ Varsayılan veri tipleri program kurulduğu an itibariyle tanımlı olan veri tipleridir.    Kullanıcı tanımlı veri tipleri ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.   Veri Tiplerinin Gruplanması Genel olarak veri tipleri dört ana başlık altında toplanabilir
+ Basic type (Temel Veri Tipi ) : Sayılar, metin ve bool ifadeler bu kategoriye girer.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Veri Tipleri (Data Types) " />
+<meta property="og:description" content="GO Dilinde Veri Tipleri (Data Types in GO) GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.
+ Varsayılan veri tipleri program kurulduğu an itibariyle tanımlı olan veri tipleridir.    Kullanıcı tanımlı veri tipleri ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.   Veri Tiplerinin Gruplanması Genel olarak veri tipleri dört ana başlık altında toplanabilir
+ Basic type (Temel Veri Tipi ) : Sayılar, metin ve bool ifadeler bu kategoriye girer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/posts/data-types/" />
+
+<title>Veri Tipleri (Data Types)  | Golang Cookbook by GOKAYBURUC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2d9ad00dc8025c6dba3558ad355da7dcfa650c2fbfaccea13436ffa1c3e6aab3.js" integrity="sha256-LZrQDcgCXG26NVitNV2n3PplDC&#43;/rM6hNDb/ocPmqrM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/golang_logo_icon.png" alt="Logo" /><span>Golang Cookbook by GOKAYBURUC</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/hello-world/" class="">Hello World Uygulaması </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="active">Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/variables/" class="">Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="">Sabitler (Constants)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/switch-case/" class="">Anahtar Durum İfadeleri (Switch Case )</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/arrays/" class="">Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/loops/" class="">Döngüler (Loops)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/functions/" class="">Fonksiyonlar (Functions)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/operators/" class="">Operatörler - Operators</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/conditionals/" class="">Şartlı İfadeler (If - Else Conditionals)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">Dilimler - Slices </a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Veri Tipleri (Data Types) </strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#veri-tiplerinin-gruplanması">Veri Tiplerinin Gruplanması</a></li>
+    <li><a href="#1-temel-veri-tipleri-basic-types">1. Temel Veri Tipleri (Basic Types)</a>
+      <ul>
+        <li><a href="#int-integer-tamsayı">Int (Integer-Tamsayı)</a></li>
+        <li><a href="#float-ondalık">Float (Ondalık)</a></li>
+        <li><a href="#string-metin">String (Metin)</a></li>
+        <li><a href="#boolean-mantıksal">Boolean (Mantıksal)</a></li>
+        <li><a href="#complex--karmaşık-">Complex ( Karmaşık )</a></li>
+      </ul>
+    </li>
+    <li><a href="#kaynakça">Kaynakça</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="go-dilinde-veri-tipleri-data-types-in-go">GO Dilinde Veri Tipleri (Data Types in GO)</h1>
+<p>GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.</p>
+<blockquote class="book-hint info">
+  <ul>
+<li><strong>Varsayılan veri tipleri</strong>  program kurulduğu an itibariyle tanımlı olan veri tipleridir.</li>
+</ul>
+</blockquote>
+
+<blockquote class="book-hint info">
+  <ul>
+<li><strong>Kullanıcı tanımlı veri tipleri</strong> ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.</li>
+</ul>
+</blockquote>
+
+<h2 id="veri-tiplerinin-gruplanması">Veri Tiplerinin Gruplanması</h2>
+<p>Genel olarak veri tipleri dört ana başlık altında toplanabilir</p>
+<p><img src="/img/datatypes.png" alt="data-types" /></p>
+<ol>
+<li><strong>Basic type (Temel Veri Tipi ) :</strong> Sayılar, metin ve bool ifadeler bu kategoriye girer. <em>int, float, string, bool, complex</em></li>
+<li><strong>Aggregate type (Toplanmış Veri Tipi):</strong>  Dizi ve yapılar bu kategoriye girer. <em>array, struct</em></li>
+<li><strong>Reference type (Referans Veri Tipi):</strong> İşaretçiler, dilimler, haritalar, işlevler ve kanallar bu kategoriye girer.  <em>pointer, slice, map, function, channel</em></li>
+<li><strong>Interface Type (Arayüz Veri Tipi) :</strong> Arayüzler bu veri tipinde yer alır.  <em>interface</em></li>
+</ol>
+<hr>
+<h2 id="1-temel-veri-tipleri-basic-types">1. Temel Veri Tipleri (Basic Types)</h2>
+<ol>
+<li>String (<em>string</em>)</li>
+<li>Int (<em>int8, int16</em>, <em>int32, int64</em>)</li>
+<li>Float  ( <em>float32, float64</em>)</li>
+<li>Boolean (<em>bool</em>)</li>
+<li>Complex(complex)</li>
+</ol>
+<h3 id="int-integer-tamsayı">Int (Integer-Tamsayı)</h3>
+<p>Tam sayı değerlerlerinin program hafızasında tutulduğu veri tipidir.</p>
+<p><code>int</code> tanımlaması aşağıdaki şekilde yapılır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">degiskenAdi</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">32</span>
+</code></pre></div><p>İkinci bir tanımlama yöntemi ise aşağıdaki şekildedir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">degiskenAdi</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">35</span> 
+</code></pre></div><p>Peki bu sayı tipleri GO programlama tipinde nasıl tanımlanır? Bir örnek ile konuyu açıklamaya çalışalım.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span> 
+<span style="color:#f92672">import</span> (<span style="color:#e6db74">&#34;fmt&#34;</span>)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">matematikNotu</span> <span style="color:#66d9ef">int8</span> = <span style="color:#ae81ff">85</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">edebiyatNotu</span> <span style="color:#66d9ef">int8</span> = <span style="color:#ae81ff">92</span>
+	<span style="color:#a6e22e">fizikNotu</span> = <span style="color:#ae81ff">65</span>
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">matematikNotu</span>, <span style="color:#a6e22e">edebiyatNotu</span>, <span style="color:#a6e22e">fizikNotu</span>)
+	<span style="color:#75715e">// ortalama 
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>((<span style="color:#a6e22e">matematikNotu</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">edebiyatNotu</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">fizikNotu</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">3</span>)
+}
+</code></pre></div><p>Yukarıda tanımlandığı gibi sisteme <code>int</code> ifadesi ile bir değişken tanımladığımızda bu değişken sistem hafızasında <code>integer</code> olarak tutulur ve bu şekilde işlemlere dahil edilir.</p>
+<p>Yukarıdaki örnek incelendiğinde <code>matematikNotu</code> isimli bir <code>int</code> ifadesi tanımladık. Bu değerler 1 ile 100 arasında olacağından dolayı veri tipi olarak <code>int8</code> seçtik. Bu seçim sayılarımızın -127 ve 128 arasında olacağından dolayıdır. Aynı şekilde <code>edebiyatNotu</code> isimli bir <code>int8</code> ifade tanımladık.</p>
+<h4 id="int-veri-tipinin-hafızada-kapladığı-yer">Int Veri Tipinin Hafızada Kapladığı Yer</h4>
+<p>Tanımladığımız verileriin hafızada kapladığı yer, programcıların en çok kafasını kurcalayan sorulardan biridir. Yazdığınız programın performansını etkiler ve bu sebeple bu temelin ne olduğu ile ilgili bir ön bilgi edinilmesi önemlidir.</p>
+<p>Hafızada kapladığı yere ve oluşturulma usullerine göre <code>int</code> veri tipleri aşağıda yer almaktadır.</p>
+<table>
+<thead>
+<tr>
+<th>Veri Tipi</th>
+<th>Açıklama</th>
+<th>Veri Aralığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>int8</strong></td>
+<td>8-bit signed integer</td>
+<td>-127 ve 128 değerleri arasında yer alır ( signed integer)</td>
+</tr>
+<tr>
+<td><strong>int16</strong></td>
+<td>16-bit signed integer</td>
+<td>-32,768 ve +32,767 değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>int32</strong></td>
+<td>32-bit signed integer</td>
+<td>-2147483648 to 2147483647 değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>int64</strong></td>
+<td>64-bit signed integer</td>
+<td>-9,223,372,036,854,775,808 ve  9,223,372,036,854,775,807 değerleri arasında yer alır.</td>
+</tr>
+<tr>
+<td><strong>uint8</strong></td>
+<td>8-bit unsigned integer</td>
+<td>0 ve 255 değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>uint16</strong></td>
+<td>16-bit unsigned integer</td>
+<td>0 ve 65535	değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>uint32</strong></td>
+<td>32-bit unsigned integer</td>
+<td>0 ve 4294967295 değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>uint64</strong></td>
+<td>64-bit unsigned integer</td>
+<td>0 ve (2^64) değerleri arasında yer alır</td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td>Hem int hem de uint, 32 veya 64 bit olmak üzere aynı boyutu içerir.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>uint</strong></td>
+<td>Hem int hem de uint, 32 veya 64 bit olmak üzere aynı boyutu içerir.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>rune</strong></td>
+<td>İnt32 ile eşanlamlıdır ve ayrıca Unicode kod noktalarını temsil eder.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>byte</strong></td>
+<td>uint8 ile eşanlamlıdır.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>uintptr</strong></td>
+<td>İşaretsiz bir tamsayı (unsigned integer) türüdür. Genişliği tanımlanmamıştır, ancak bir işaretçi değerinin tüm bitlerini tutabilir.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="book-hint info">
+  32 bit , 64 bit veri tiplerinin mevcut olmasının temel sebebi tutulacak verinin sistemde kaplayacağı yeri düzenlemek içindir.
+</blockquote>
+
+<p><strong>Birden çok veri tipinin olması sistem hafızasında kaplanacak yer sorunu ile ilgilidir.</strong> Milyonlarca sayıdan oluşan bir veri setinin olduğunu düşünelim. Bu sayıların ise 1 ile 1000 arasında yer aldığını düşünelim. Eğer sisteme int16 ( 16 bit tamsayı ) veri tipinde veri girileceğini belirtmez isek sistem bu veri tipleri için int64 (64 bit tamsayı ) imiş gibi muamele edip her bir sayı için 2^64 &lsquo;lük bir yer ayıracaktır. Böylece yapılan işlemler için ayrılan hafıza muazzam boyutlarda artacaktır.</p>
+<h3 id="float-ondalık">Float (Ondalık)</h3>
+<p>Virgül ya da nokta ile ayrılmış ondalıklı değerleri ifade eder.
+<code>int</code> ifadelerinde olduğu gibi <code>float</code> ifadelerde de hafızada kapladığı yere bakılarak bir seçim yapılır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sicaklik</span> <span style="color:#66d9ef">float32</span> = <span style="color:#ae81ff">33.25</span>
+</code></pre></div><p>Diğer bir tanımlama ise şu şekilde yapılabilir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">sicaklik</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">33.25</span> 
+</code></pre></div><p>Veri tipi tanımlaması aşağıdaki tabloya göre belirlenir.</p>
+<table>
+<thead>
+<tr>
+<th>Veri Tipi</th>
+<th>Açıklama</th>
+<th>Değer Aralığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float32</td>
+<td>32-bit IEEE 754 floating-point number</td>
+<td>İşaretli bir 32 bit tamsayı değişkeni maksimum 231 − 1 = 2,147,483,647 değerine sahipken, bir IEEE 754 32 bitlik taban-2 kayan noktalı değişkenin maksimum değeri (2 − 2−23) × 2127 ≈ 3.4028235 × 1038 .</td>
+</tr>
+<tr>
+<td>float64</td>
+<td>64-bit IEEE 754 floating-point number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Float ifadelere ait bir örnek aşağıda yer almaktadır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#75715e">//float verilerin tanımlanması
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">20.45</span>
+	<span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">34.89</span>
+	<span style="color:#75715e">//Cikartma islemi
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">b</span><span style="color:#f92672">-</span><span style="color:#a6e22e">a</span>
+	<span style="color:#75715e">// Sonuc Görüntülemesi
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Result is: %f&#34;</span>, <span style="color:#a6e22e">c</span>)
+	<span style="color:#75715e">// Vier türünün görüntülenmesi 
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\nThe type of c is : %T&#34;</span>, <span style="color:#a6e22e">c</span>)
+}
+</code></pre></div><p>Örneğimizde <code>a</code> ve <code>b</code> olmak üzere iki adet <code>float</code> değişken tanımlanmıştır. İki değere de <code>float64</code> atanmıştır.</p>
+<blockquote class="book-hint warning">
+  <strong>HATIRLATMA:</strong>
+Eğer float ifade tanımlanırken bir veri tipi seçilmeden tanımlama yapılırsa GO otomatik olarak float64 seçimi yapar.
+</blockquote>
+
+<hr>
+<h3 id="string-metin">String (Metin)</h3>
+<p>String veri türü metin verilerinin bir dize olarak tutulduğu veri tipidir. Bu veriler baytlardan oluşur.</p>
+<p><code>string</code> ifadeler aşağıdaki şekilde tanımlanır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">degiskenAdi</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;metin ifadesi&#34;</span>
+</code></pre></div><p>ikinci bir tanımlama yöntemi ise aşağıdaki şekildedir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">degiskenAdi</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;metin ifadesi&#34;</span>
+</code></pre></div><p>Şimdi bir uygulama örneği ile devam edelim.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+<span style="color:#a6e22e">stringIfadesi</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;GOKAYBURUC.DEV&#34;</span>
+	
+<span style="color:#75715e">// String ifadesinin uzunluğunun görüntülenmesi
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Length of the string is:%d&#34;</span>,
+								len(<span style="color:#a6e22e">stringIfadesi</span>))
+	
+<span style="color:#75715e">// String ifadesinin görüntülenmesi
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\nString is: %s&#34;</span>, <span style="color:#a6e22e">stringIfadesi</span>)
+	
+<span style="color:#75715e">// String ifadesinin veri türünün görüntülenmesi 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;\nType of str is: %T&#34;</span>, <span style="color:#a6e22e">stringIfadesi</span>)
+}
+
+</code></pre></div><h3 id="boolean-mantıksal">Boolean (Mantıksal)</h3>
+<p>Bir veri tipinin mantıksal değerler olan <code>true</code> ya da <code>false</code> döndürdüğü ifadelerdir.  Bir koşullu işlemin sonucu bilgisayar tarafından geçerli olduğu noktada <code>true</code> geçersiz olduğu noktada ise <code>false</code> değerini döndürür.</p>
+<table>
+<thead>
+<tr>
+<th>Veri Tipi</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td>koşul sınamasının olumlu olması sonucu dönen değer</td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td>koşul sınamasının olumsuz olması sonucu dönen değer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="boolean-uygulaması">Boolean Uygulaması</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span> 
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> = <span style="color:#ae81ff">25</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> = <span style="color:#ae81ff">45</span>
+
+	<span style="color:#a6e22e">a</span>=<span style="color:#ae81ff">25</span>
+	<span style="color:#a6e22e">b</span>=<span style="color:#ae81ff">45</span>
+
+	<span style="color:#75715e">//mantıksal sorgu 
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">sorguBir</span> <span style="color:#f92672">:=</span> (<span style="color:#a6e22e">a</span> &gt; <span style="color:#a6e22e">b</span>) 
+	<span style="color:#a6e22e">sorguİki</span> <span style="color:#f92672">:=</span> (<span style="color:#a6e22e">a</span> &lt; <span style="color:#a6e22e">b</span>) 
+	<span style="color:#a6e22e">sorguUc</span> <span style="color:#f92672">:=</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span>) 
+	<span style="color:#a6e22e">sorguDort</span> <span style="color:#f92672">:=</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">b</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">sorguBir</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">sorguİki</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">sorguUc</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">sorguDort</span>)
+
+
+	<span style="color:#75715e">// Deger ataması
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ehliyet</span> <span style="color:#66d9ef">bool</span> = <span style="color:#66d9ef">true</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ruhsat</span> <span style="color:#66d9ef">bool</span> = <span style="color:#66d9ef">false</span>
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Ehliyet : %v\nRuhsat : %v \n&#34;</span>, <span style="color:#a6e22e">ehliyet</span>,<span style="color:#a6e22e">ruhsat</span>)
+}
+
+</code></pre></div><h3 id="complex--karmaşık-">Complex ( Karmaşık )</h3>
+<p>Matematik gösterimi i ve j ye bağlı olan ve iki boyutlu bir analitik düzlem üstünde gösterilen sayılar için sistem hafızasında tutulan veri tipidir.</p>
+<p>Komplek Sayi  <code>j + Xi</code>  seklinde yazılır. Yani sayının bir imajiner bir de reel kısmı mevcuttur. Sonuçlarımız da bu şekilde döndürülecektir.</p>
+<p>Yazım şekili</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">degiskenAdi</span> <span style="color:#66d9ef">complex64</span> = complex(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">15</span>)
+</code></pre></div><p>ikinci yazım şekli</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">degiskenAdi</span> <span style="color:#f92672">:=</span> complex(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">15</span>)
+</code></pre></div><p>Komplex sayı veri tipine ait tablo aşağıda yer almaktadır.</p>
+<table>
+<thead>
+<tr>
+<th>Veri Tipi</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>complex64</td>
+<td><code>float32</code> değerini reel (<code>j</code>) ve imajiner (<code>i</code>) kısımda tutan deger</td>
+</tr>
+<tr>
+<td>complex128</td>
+<td><code>float64</code> değerini reel (<code>j</code>) ve imajiner(<code>i</code>) kısımda tutan değer</td>
+</tr>
+</tbody>
+</table>
+<p>Aşağıda açıklama örneğimiz yer almaktadır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Go program to illustrate
+</span><span style="color:#75715e">// the use of complex numbers
+</span><span style="color:#75715e"></span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+ 
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+     
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#66d9ef">complex128</span> = complex(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>)
+   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">complex64</span> = complex(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>)
+
+	<span style="color:#75715e">//
+</span><span style="color:#75715e"></span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">b</span>)
+    
+   <span style="color:#75715e">// Display the type
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;The type of a is %T and &#34;</span><span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#34;the type of b is %T&#34;</span>, <span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>)
+}
+
+</code></pre></div><h2 id="kaynakça">Kaynakça</h2>
+<ol>
+<li><a href="https://www.geeksforgeeks.org/data-types-in-go/">https://www.geeksforgeeks.org/data-types-in-go/</a></li>
+<li><a href="https://go.dev/tour/basics/11">https://go.dev/tour/basics/11</a></li>
+<li><a href="https://www.programiz.com/golang/data-types">https://www.programiz.com/golang/data-types</a></li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#veri-tiplerinin-gruplanması">Veri Tiplerinin Gruplanması</a></li>
+    <li><a href="#1-temel-veri-tipleri-basic-types">1. Temel Veri Tipleri (Basic Types)</a>
+      <ul>
+        <li><a href="#int-integer-tamsayı">Int (Integer-Tamsayı)</a></li>
+        <li><a href="#float-ondalık">Float (Ondalık)</a></li>
+        <li><a href="#string-metin">String (Metin)</a></li>
+        <li><a href="#boolean-mantıksal">Boolean (Mantıksal)</a></li>
+        <li><a href="#complex--karmaşık-">Complex ( Karmaşık )</a></li>
+      </ul>
+    </li>
+    <li><a href="#kaynakça">Kaynakça</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 ---
-title: "Anahtar Durum İfadeleri (Switch Case )"
-weight: 4
+title: "13. Anahtar Durum İfadeleri (Switch Case )"
+weight: 13
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

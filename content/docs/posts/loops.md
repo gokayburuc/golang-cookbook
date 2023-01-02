@@ -1,6 +1,6 @@
 ---
-title: "Döngüler (Loops)"
-weight: 6
+title: "14. Döngüler (Loops)"
+weight: 14
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

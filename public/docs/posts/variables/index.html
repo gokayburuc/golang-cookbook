@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Değişkenler (Variables) Değişken ( Variable ) , bir değeri tutmak için bir depolama konumudur. İzin verilen değerler kümesi, değişkenin türüne göre belirlenir.
+// string degisken turu var isim string = &#34;Gokay&#34; Yani elimizde isim diye bir değişken olduğunu var sayalım. İzin verilen deger olarak degisken türü dikkate alındığında string type bir ifade olduğunu düşünürsek bu ifade yalnızca string veri tipinde tutulabilir. Yani yazı olarak saklanabilir.
+ string olarak saklanan bir değişkene, bir tam sayı integer veya ondalıklı sayı float değer verirsek, veyahut mantıksal bool bir ifade verirsek sistemden hata alırız.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Değişkenler (Variables)" />
+<meta property="og:description" content="Değişkenler (Variables) Değişken ( Variable ) , bir değeri tutmak için bir depolama konumudur. İzin verilen değerler kümesi, değişkenin türüne göre belirlenir.
+// string degisken turu var isim string = &#34;Gokay&#34; Yani elimizde isim diye bir değişken olduğunu var sayalım. İzin verilen deger olarak degisken türü dikkate alındığında string type bir ifade olduğunu düşünürsek bu ifade yalnızca string veri tipinde tutulabilir. Yani yazı olarak saklanabilir.
+ string olarak saklanan bir değişkene, bir tam sayı integer veya ondalıklı sayı float değer verirsek, veyahut mantıksal bool bir ifade verirsek sistemden hata alırız." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/posts/variables/" />
+
+<title>Değişkenler (Variables) | Golang Cookbook by GOKAYBURUC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2d9ad00dc8025c6dba3558ad355da7dcfa650c2fbfaccea13436ffa1c3e6aab3.js" integrity="sha256-LZrQDcgCXG26NVitNV2n3PplDC&#43;/rM6hNDb/ocPmqrM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/golang_logo_icon.png" alt="Logo" /><span>Golang Cookbook by GOKAYBURUC</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/hello-world/" class="">Hello World Uygulaması </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="">Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/variables/" class="active">Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="">Sabitler (Constants)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/switch-case/" class="">Anahtar Durum İfadeleri (Switch Case )</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/arrays/" class="">Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/loops/" class="">Döngüler (Loops)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/functions/" class="">Fonksiyonlar (Functions)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/operators/" class="">Operatörler - Operators</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/conditionals/" class="">Şartlı İfadeler (If - Else Conditionals)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">Dilimler - Slices </a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Değişkenler (Variables)</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#değişkenlerin-özellikleri">Değişkenlerin özellikleri</a></li>
+    <li><a href="#değişken-tanımlama">Değişken Tanımlama</a></li>
+    <li><a href="#birden-çok-değişkeni-tek-satırda-tanımlama">Birden Çok Değişkeni Tek Satırda Tanımlama</a></li>
+    <li><a href="#uygulama-örneği">Uygulama Örneği</a></li>
+    <li><a href="#kaynakça">Kaynakça</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="değişkenler-variables">Değişkenler (Variables)</h1>
+<p>Değişken ( <strong>Variable</strong> ) , bir değeri tutmak için bir depolama konumudur. İzin verilen değerler kümesi, değişkenin türüne göre belirlenir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// string degisken turu
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isim</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;Gokay&#34;</span>
+</code></pre></div><p>Yani elimizde <code>isim</code> diye bir değişken olduğunu var sayalım. İzin verilen deger olarak degisken türü dikkate alındığında <code>string</code>  type bir ifade olduğunu düşünürsek bu ifade yalnızca string veri tipinde tutulabilir. Yani yazı olarak saklanabilir.</p>
+<blockquote class="book-hint danger">
+  <blockquote>
+<p><code>string</code> olarak saklanan bir değişkene, bir tam sayı <code>integer</code>  veya ondalıklı sayı <code>float</code> değer verirsek, veyahut mantıksal <code>bool</code> bir ifade verirsek sistemden hata alırız.  <code>isim</code> değişkenimiz yalnızca string olarak sistemde saklanabilir.</p>
+</blockquote>
+</blockquote>
+
+<p>Değişken ifadeleri adı üzerinde değişebilen ifadelerdir. Sabitler <code>const</code> ifadelerinden farkları <strong>tanımlandıktan sonra sistemdeki değerlerinin değişebilmesinden ileri gelmektedir.</strong></p>
+<h2 id="değişkenlerin-özellikleri">Değişkenlerin özellikleri</h2>
+<ul>
+<li>İşleme tabi tutulabilirler</li>
+<li>Üzerlerine defalarca değer ataması yapılabilir.</li>
+<li>Sistemden çağrıldıkları zaman son atanan değeri döndürürler.</li>
+</ul>
+<h2 id="değişken-tanımlama">Değişken Tanımlama</h2>
+<p>Peki nasıl değişken tanımlarız. Tanımlama şekilleri nelerdir?</p>
+<p>İlk tanımlama şeklimiz detaylı tanımlama şeklidir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">country</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;Turkey&#34;</span>
+</code></pre></div><p>Bu tanımlama ifadesini biraz daha kısaltabiliriz.</p>
+<blockquote>
+<p>GO programlama dili otomatik olarak değişken türü tanıma ve atama özelliğine sahiptir.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">country</span> = <span style="color:#e6db74">&#34;Turkey&#34;</span>
+</code></pre></div><p>Eğer ifademizi bir fonksiyon içinde tanımlıyorsak alternatif bir kısa yazım daha mevcuttur. Bu ifadede <code>:=</code>  karakterleri ile eşitlik yazımı mevcuttur.</p>
+<blockquote>
+<p>Bu tanımlama yanlızca  fonksiyon scope&rsquo;u içinde tanımlamalarda mümkündür.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+	<span style="color:#a6e22e">country</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Turkey&#34;</span>
+}
+</code></pre></div><h2 id="birden-çok-değişkeni-tek-satırda-tanımlama">Birden Çok Değişkeni Tek Satırda Tanımlama</h2>
+<p>Eğer elimizde birden çok değişken varsa ve bunları tek satır içerisinde tanımlamak istiyorsak  aşağıdaki yazım türünde tanımlarız.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Burada b ve c olmak üzere, iki adet <code>int</code> ifadesini tek bir satır içerisinde virgül ile ayırarak tanımladık.</p>
+<p>Aynı şekilde değişken tipini yazmadan da değişkene değer  atama işlemi yapabiliyoruz. GO otomatik olarak değişken türünü tanımlayıp atamasını yapmaktadır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">en</span>, <span style="color:#a6e22e">boy</span> = <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>
+</code></pre></div><p>Peki ifadelerden biri string diğeri bool olsaydı nasıl tanımlayacaktık?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">para</span> <span style="color:#66d9ef">bool</span>, <span style="color:#a6e22e">miktar</span> <span style="color:#66d9ef">float64</span> = <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">5500.25</span>  
+</code></pre></div><p>aynı ifadeyi bir de kısaltılmış olarak yazabiliriz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">para</span>, <span style="color:#a6e22e">miktar</span> = <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">5500.25</span>
+</code></pre></div><p>Biraz daha karmaşık bir şekilde tanımlama işlemi yapalım.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isim</span> ,<span style="color:#a6e22e">soyisim</span> , <span style="color:#a6e22e">matematik</span> , <span style="color:#a6e22e">edebiyat</span> , <span style="color:#a6e22e">gecmeDurum</span>  = <span style="color:#e6db74">&#34;Ahmet&#34;</span>,<span style="color:#e6db74">&#34;YILMAZ&#34;</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">83</span>, <span style="color:#66d9ef">true</span>
+</code></pre></div><h2 id="uygulama-örneği">Uygulama Örneği</h2>
+<p>Aşağıda bir uygulamamız bulunuyor. Bu uygulamada birden çok değişken tanımlıyoruz ve <code>fmt</code> yardımı ile sonuçları ekrana yazdırıyoruz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+
+	<span style="color:#a6e22e">sehir</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Edirne&#34;</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">kilo</span> <span style="color:#66d9ef">float64</span> = <span style="color:#ae81ff">75.3</span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">boy</span> <span style="color:#66d9ef">float64</span> = <span style="color:#ae81ff">182.3</span>
+	<span style="color:#a6e22e">yas</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">35</span>
+
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mezuniyet</span>,<span style="color:#a6e22e">askerlik</span> <span style="color:#66d9ef">bool</span> = <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">true</span> 
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">boy</span>,<span style="color:#a6e22e">kilo</span>,<span style="color:#a6e22e">yas</span>,<span style="color:#a6e22e">sehir</span>)
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">mezuniyet</span>, <span style="color:#a6e22e">askerlik</span>)
+	
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isim</span> ,<span style="color:#a6e22e">soyisim</span> , <span style="color:#a6e22e">matematik</span> , <span style="color:#a6e22e">edebiyat</span> , <span style="color:#a6e22e">gecmeDurum</span>  = <span style="color:#e6db74">&#34;Ahmet&#34;</span>,<span style="color:#e6db74">&#34;YILMAZ&#34;</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">83</span>, <span style="color:#66d9ef">true</span>
+	<span style="color:#75715e">// alternatif kısa gösterim 
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//isim ,soyisim , matematik , edebiyat , gecmeDurum  := &#34;Ahmet&#34;,&#34;YILMAZ&#34;, 75, 83, true
+</span><span style="color:#75715e"></span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">isim</span>,<span style="color:#a6e22e">soyisim</span>,<span style="color:#a6e22e">matematik</span>,<span style="color:#a6e22e">edebiyat</span>,<span style="color:#a6e22e">gecmeDurum</span>)
+}
+
+</code></pre></div><h2 id="kaynakça">Kaynakça</h2>
+<ol>
+<li><a href="https://gobyexample.com/variables">https://gobyexample.com/variables</a></li>
+<li><a href="https://golangbot.com/variables/">https://golangbot.com/variables/</a></li>
+<li><a href="https://zetcode.com/golang/variable/">https://zetcode.com/golang/variable/</a></li>
+<li><a href="https://www.w3schools.com/go/go_variable_multi.php">https://www.w3schools.com/go/go_variable_multi.php</a></li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#değişkenlerin-özellikleri">Değişkenlerin özellikleri</a></li>
+    <li><a href="#değişken-tanımlama">Değişken Tanımlama</a></li>
+    <li><a href="#birden-çok-değişkeni-tek-satırda-tanımlama">Birden Çok Değişkeni Tek Satırda Tanımlama</a></li>
+    <li><a href="#uygulama-örneği">Uygulama Örneği</a></li>
+    <li><a href="#kaynakça">Kaynakça</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

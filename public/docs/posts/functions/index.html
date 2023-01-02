@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fonksiyonlar (Functions) Bir fonksiyon (işlev), sıfır veya daha fazla giriş parametresinin sıfır veya daha fazla çıkış parametresine eşlenmesidir.
+HATIRLATMA: Giriş parametreleri fonksiyonlarda argüman olarak adlandırılırlar. Konu içerisinde geçen argüman ifadeleri fonksiyonlara giriş yapılan değerler anlamına gelir.  Fonksiyon Kullanmanın Avantajları Fonksiyonların (İşlevlerin) kullanmanın avantajları şunlardır:
+ Kod tekrarını azaltma Karmaşık problemleri daha basit parçalara ayırma Kodun netliğini artırma Kodun yeniden kullanımı Bilgi gizleme  Fonksiyonların Uygulama Alanları Fonksiyonlar GO programlama dilini daha esnek hale getirirler.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Fonksiyonlar (Functions)" />
+<meta property="og:description" content="Fonksiyonlar (Functions) Bir fonksiyon (işlev), sıfır veya daha fazla giriş parametresinin sıfır veya daha fazla çıkış parametresine eşlenmesidir.
+HATIRLATMA: Giriş parametreleri fonksiyonlarda argüman olarak adlandırılırlar. Konu içerisinde geçen argüman ifadeleri fonksiyonlara giriş yapılan değerler anlamına gelir.  Fonksiyon Kullanmanın Avantajları Fonksiyonların (İşlevlerin) kullanmanın avantajları şunlardır:
+ Kod tekrarını azaltma Karmaşık problemleri daha basit parçalara ayırma Kodun netliğini artırma Kodun yeniden kullanımı Bilgi gizleme  Fonksiyonların Uygulama Alanları Fonksiyonlar GO programlama dilini daha esnek hale getirirler." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/posts/functions/" />
+
+<title>Fonksiyonlar (Functions) | Golang Cookbook by GOKAYBURUC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.2d9ad00dc8025c6dba3558ad355da7dcfa650c2fbfaccea13436ffa1c3e6aab3.js" integrity="sha256-LZrQDcgCXG26NVitNV2n3PplDC&#43;/rM6hNDb/ocPmqrM=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/golang_logo_icon.png" alt="Logo" /><span>Golang Cookbook by GOKAYBURUC</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/hello-world/" class="">Hello World Uygulaması </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="">Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/variables/" class="">Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="">Sabitler (Constants)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/switch-case/" class="">Anahtar Durum İfadeleri (Switch Case )</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/arrays/" class="">Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/loops/" class="">Döngüler (Loops)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/functions/" class="active">Fonksiyonlar (Functions)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/operators/" class="">Operatörler - Operators</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/conditionals/" class="">Şartlı İfadeler (If - Else Conditionals)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">Dilimler - Slices </a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Fonksiyonlar (Functions)</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#fonksiyon-kullanmanın-avantajları">Fonksiyon Kullanmanın Avantajları</a></li>
+    <li><a href="#fonksiyonların-uygulama-alanları">Fonksiyonların Uygulama Alanları</a></li>
+    <li><a href="#fonksiyonların-yapısı">Fonksiyonların Yapısı</a>
+      <ul>
+        <li><a href="#func">func</a></li>
+        <li><a href="#return">return</a></li>
+        <li><a href="#fonksiyon-gövdesi---function-body">Fonksiyon Gövdesi - Function Body</a></li>
+        <li><a href="#fonksiyonların-çağırılması---function-calling">Fonksiyonların Çağırılması - Function Calling</a></li>
+      </ul>
+    </li>
+    <li><a href="#main-fonksiyonu">main Fonksiyonu</a></li>
+    <li><a href="#fonksiyon-örneği">Fonksiyon Örneği</a></li>
+    <li><a href="#basit-fonksiyon-yazımı-örneği">Basit Fonksiyon Yazımı Örneği</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="fonksiyonlar-functions">Fonksiyonlar (Functions)</h1>
+<p>Bir fonksiyon (işlev), sıfır veya daha fazla giriş parametresinin sıfır veya daha fazla çıkış parametresine eşlenmesidir.</p>
+<blockquote class="book-hint warning">
+  <strong>HATIRLATMA:</strong>
+Giriş parametreleri fonksiyonlarda <strong>argüman</strong> olarak adlandırılırlar. Konu içerisinde geçen argüman ifadeleri fonksiyonlara giriş yapılan değerler anlamına gelir.
+</blockquote>
+
+<h2 id="fonksiyon-kullanmanın-avantajları">Fonksiyon Kullanmanın Avantajları</h2>
+<p>Fonksiyonların (İşlevlerin) kullanmanın avantajları şunlardır:</p>
+<ul>
+<li>Kod tekrarını azaltma</li>
+<li>Karmaşık problemleri daha basit parçalara ayırma</li>
+<li>Kodun netliğini artırma</li>
+<li>Kodun yeniden kullanımı</li>
+<li>Bilgi gizleme</li>
+</ul>
+<h2 id="fonksiyonların-uygulama-alanları">Fonksiyonların Uygulama Alanları</h2>
+<p>Fonksiyonlar GO programlama dilini daha esnek hale getirirler.</p>
+<ul>
+<li>Fonksiyonlar değişkenlere atanabilirler</li>
+<li>Fonksiyonlara argüman olarak iletilebilir</li>
+<li>Fonksiyonlardan döndürülebilir</li>
+</ul>
+<h2 id="fonksiyonların-yapısı">Fonksiyonların Yapısı</h2>
+<p>Fonksiyonlar, belirli kısımlardan oluşur.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">FonksiyonAdi</span>(<span style="color:#a6e22e">parametreler</span>) <span style="color:#a6e22e">döndürülecekVeri</span> <span style="color:#a6e22e">Tipi</span> {
+    <span style="color:#75715e">//gövde - body 
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Yukarıda bir fonksiyonun temel yapısını görüyorsunuz.</p>
+<ol>
+<li>GO dilinde bir fonksiyon yazarken önce <code>func</code> ifadesi yazılır.</li>
+<li><code>func</code> ifadesi sonrasında fonksiyonun adı yazılır. Bu yazım sırasında sayı ve boşluk ifadeleri kullanılmaz.</li>
+<li>Eğer kullanılacaksa fonksiyona giriş yapılacak argüman (<code>argument</code>) ifadeleri <code>()</code> içine yazılır.</li>
+<li>Döndürülecek veri tipi <code>return</code> ifadesi sonrasında fonksiyondan çıkış yapacak değeri ifade eder. Bu değerin veri tipi <code>()</code> sonrasında yazılır.</li>
+<li><code>{}</code> süslü parantez ile fonksiyon gövdesi <code>body</code> ifadesi oluşturulur. Fonksiyonun yapacağı işlemler bu parantez içinde kalan bölgeye yazılır.</li>
+</ol>
+<h3 id="func">func</h3>
+<p>Go&rsquo;daki işlevler <code>func</code> anahtar sözcüğüyle oluşturulur.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Fonksiyon Gövdesi - function body
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SayHi</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+	<span style="color:#75715e">// islemler - transactions 
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h3 id="return">return</h3>
+<p>İşlevlerden değer döndürmek için <code>return</code> anahtar sözcüğünü kullanırız. Return ifadesinde döndürülecek verinin türü <code>()</code> ifadesi sonrasında belirtilir. <code>string</code> , <code>int</code>, <code>float</code> gibi ifadelerle belirtilir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Merhaba</span>(<span style="color:#a6e22e">isim</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Merhaba &#34;</span>, <span style="color:#a6e22e">isim</span>)
+
+    <span style="color:#75715e">// cumle isimli degisken
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">cumle</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Merhaba &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">isim</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; hoşgeldin!&#34;</span>
+	
+    <span style="color:#75715e">// degiskenin döndürülmesi
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cumle</span>
+}
+
+</code></pre></div><h3 id="fonksiyon-gövdesi---function-body">Fonksiyon Gövdesi - Function Body</h3>
+<p>Fonksiyonun gövdesi, fonksiyon çağrıldığında yürütülen ifadelerden oluşur. Gövde, bir <strong>çift kıvrık parantez</strong> <code>{}</code> ile sınırlandırılmıştır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Merhaba</span>(<span style="color:#a6e22e">isim</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+    <span style="color:#75715e">// 
+</span><span style="color:#75715e"></span>}
+
+</code></pre></div><h3 id="fonksiyonların-çağırılması---function-calling">Fonksiyonların Çağırılması - Function Calling</h3>
+<blockquote class="book-hint info">
+  Bir fonksiyonu çağırmak için adını yazar ve ardından yuvarlak parantezler () koyarız.
+</blockquote>
+
+<p>Bir fonksiyon <strong>parametre</strong> alabilir veya almayabilir.</p>
+<h2 id="main-fonksiyonu">main Fonksiyonu</h2>
+<p><code>main</code> isimli fonksiyon go programlama dilinin modül - paket mimarisinin temel taşıdır ve başlatıcı fonksiyon olma özelliği taşır. Her go projesinde varsayılan olarak yer alan bir fonksiyondur.</p>
+<blockquote class="book-hint warning">
+  GO programlama dilinde biz yazmasak dahil her başlatılan projede bir <code>main</code> paketi ve <code>main</code> fonksiyonu mevcuttur.
+</blockquote>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span> 
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+    <span style="color:#75715e">// tüm islemler main isimli pakette ve main isimli 
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//fonksiyonun baslattigi olaylar zinciri ile gerçekleşir. 
+</span><span style="color:#75715e"></span>}
+
+</code></pre></div><blockquote class="book-hint info">
+  GO programlama dilinde bir paket içinde gerçekleşen tüm işlemler main isimli paket altında ve main fonksiyonun başlattığı ve yürüttüğü işlemler ile gerçekleşir.
+</blockquote>
+
+<h2 id="fonksiyon-örneği">Fonksiyon Örneği</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#75715e">// fonksiyon cagirma -  function call
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">x</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">SayHi</span>(<span style="color:#e6db74">&#34;Gokay&#34;</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Return : &#34;</span>, <span style="color:#a6e22e">x</span>)
+}
+
+<span style="color:#75715e">// Fonksiyon 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SayHi</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello &#34;</span>, <span style="color:#a6e22e">name</span>)
+	<span style="color:#a6e22e">sentence</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;Hello &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; welcome!&#34;</span>
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sentence</span>
+}
+
+
+</code></pre></div><h2 id="basit-fonksiyon-yazımı-örneği">Basit Fonksiyon Yazımı Örneği</h2>
+<p>Aşağıda toplama işlemi yapan bir fonksiyon yazdık. Bu fonksiyon xotomatik olarak toplama işlemi gerçekleştirir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+
+    <span style="color:#a6e22e">x</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">4</span>
+    <span style="color:#a6e22e">y</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>
+
+    <span style="color:#a6e22e">z</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">topla</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>)
+
+    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Çıktı: %d\n&#34;</span>, <span style="color:#a6e22e">z</span>)
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">topla</span>(<span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
+}
+</code></pre></div><p><code>topla</code> isimli fonksiyon tanımlanırken <code>a</code> ve <code>b</code> isimli argümanlar <code>int</code> veri tipinde verilmiştir. Bu sisteme girilecek verilerin <code>int</code> formatında olması gerektiğini belirtir.</p>
+<p><code>()</code> dışında kalan <code>int</code> ifadesi ise, işlem sonrasında <code>return</code> ifadesinin yanında döndürülecek verinin tipinin <code>int</code> olacağını belirtmektedir.</p>
+<p>Yazdığımız fonksiyon a ve b isimli değişkenkenleri toplayarak onucu ekrana yazdırır.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#fonksiyon-kullanmanın-avantajları">Fonksiyon Kullanmanın Avantajları</a></li>
+    <li><a href="#fonksiyonların-uygulama-alanları">Fonksiyonların Uygulama Alanları</a></li>
+    <li><a href="#fonksiyonların-yapısı">Fonksiyonların Yapısı</a>
+      <ul>
+        <li><a href="#func">func</a></li>
+        <li><a href="#return">return</a></li>
+        <li><a href="#fonksiyon-gövdesi---function-body">Fonksiyon Gövdesi - Function Body</a></li>
+        <li><a href="#fonksiyonların-çağırılması---function-calling">Fonksiyonların Çağırılması - Function Calling</a></li>
+      </ul>
+    </li>
+    <li><a href="#main-fonksiyonu">main Fonksiyonu</a></li>
+    <li><a href="#fonksiyon-örneği">Fonksiyon Örneği</a></li>
+    <li><a href="#basit-fonksiyon-yazımı-örneği">Basit Fonksiyon Yazımı Örneği</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

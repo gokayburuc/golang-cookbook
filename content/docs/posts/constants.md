@@ -1,6 +1,6 @@
 ---
-title: "Sabitler (Constants)"
-weight: 3
+title: "7. Sabitler (Constants)"
+weight: 7
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

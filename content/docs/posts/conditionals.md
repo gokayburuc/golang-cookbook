@@ -1,6 +1,6 @@
 ---
-title: "Şartlı İfadeler (If - Else Conditionals)"
-weight: 6
+title: "12. Şartlı İfadeler (If - Else Conditionals)"
+weight: 12
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -11,3 +11,4 @@ weight: 6
 
 # Şartlı İfadeler (If - Else Conditionals)
 
+![caution](/img/caution.jpeg)
