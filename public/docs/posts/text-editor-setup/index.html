@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Diziler (Arrays) ">
+<meta name="description" content="Metin Editörü Kurulumu Birden çok ortamda geliştirme yapma imkanınız mevcuttur. Hatta hiçbir özel program indirmeden dahi sisteminizde kurulu olan metin editörlerinden geliştirme yapabilirsiniz. Fakat VSCode ve Sublime Text gibi metin editörleri otomatik biçimlendirme, kod hatalarını görüntüleme gibi GO özelliklerini desteklediği için kodlama sürenizi muazzam ölçüde düşürecektir.
+VSCODE WEBSITE: https://code.visualstudio.com/
+GO programlama diliyle ilgili en fazla desteğe sahip editördür. Hatta desteklediği özellikler sayesinde en kapsamlı editördür de denilebilir.
+gopls : Format, hata ve diğer özelliklerin denetlendiği kütüphanedir.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="8. Diziler - Arrays" />
-<meta property="og:description" content="Diziler (Arrays) " />
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="2. Metin Editörü Kurulumu" />
+<meta property="og:description" content="Metin Editörü Kurulumu Birden çok ortamda geliştirme yapma imkanınız mevcuttur. Hatta hiçbir özel program indirmeden dahi sisteminizde kurulu olan metin editörlerinden geliştirme yapabilirsiniz. Fakat VSCode ve Sublime Text gibi metin editörleri otomatik biçimlendirme, kod hatalarını görüntüleme gibi GO özelliklerini desteklediği için kodlama sürenizi muazzam ölçüde düşürecektir.
+VSCODE WEBSITE: https://code.visualstudio.com/
+GO programlama diliyle ilgili en fazla desteğe sahip editördür. Hatta desteklediği özellikler sayesinde en kapsamlı editördür de denilebilir.
+gopls : Format, hata ve diğer özelliklerin denetlendiği kütüphanedir." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/docs/posts/arrays/" />
+<meta property="og:url" content="http://example.org/docs/posts/text-editor-setup/" />
 
-<title>8. Diziler - Arrays | Golang Cookbook by GOKAYBURUC</title>
+<title>2. Metin Editörü Kurulumu | Golang Cookbook by GOKAYBURUC</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
@@ -80,7 +86,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/text-editor-setup/" class="">2. Metin Editörü Kurulumu</a>
+    <a href="/docs/posts/text-editor-setup/" class="active">2. Metin Editörü Kurulumu</a>
   
 
         </li>
@@ -173,7 +179,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/arrays/" class="active">8. Diziler - Arrays</a>
+    <a href="/docs/posts/arrays/" class="">8. Diziler - Arrays</a>
   
 
         </li>
@@ -321,7 +327,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>8. Diziler - Arrays</strong>
+  <strong>2. Metin Editörü Kurulumu</strong>
 
   <label for="toc-control">
     
@@ -335,7 +341,13 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vscode">VSCODE</a></li>
+    <li><a href="#sublime-text">SUBLIME TEXT</a></li>
+    <li><a href="#notepad">NOTEPAD++</a></li>
+  </ul>
+</nav>
 
 
 
@@ -346,8 +358,37 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="diziler-arrays">Diziler (Arrays)</h1>
-<p><img src="/img/caution.jpeg" alt="caution" /></p>
+  <article class="markdown"><h1 id="metin-editörü-kurulumu">Metin Editörü Kurulumu</h1>
+<p>Birden çok ortamda geliştirme yapma imkanınız mevcuttur. Hatta hiçbir özel program indirmeden dahi sisteminizde kurulu olan metin editörlerinden geliştirme yapabilirsiniz. Fakat VSCode ve Sublime Text gibi metin editörleri otomatik biçimlendirme, kod hatalarını görüntüleme gibi GO özelliklerini desteklediği için kodlama sürenizi muazzam ölçüde düşürecektir.</p>
+<h2 id="vscode">VSCODE</h2>
+<p><img src="/img/vscode.png" alt="vscode" /></p>
+<p><strong>WEBSITE:</strong>
+<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>GO programlama diliyle ilgili en fazla desteğe sahip editördür. Hatta desteklediği özellikler sayesinde en kapsamlı editördür de denilebilir.</p>
+<blockquote class="book-hint info">
+  <code>gopls</code> : Format, hata ve diğer özelliklerin denetlendiği kütüphanedir.
+</blockquote>
+
+<ol>
+<li>Programı indirip kurulum tamamlıyoruz.</li>
+<li><code>CTRL+SHIFT+P</code> ile <code>Extensions: install extension</code> yazarak eklenecek paketlerin olduğu ekranı açın.</li>
+<li>Ekrandaki arama çubuğuna <code>GO</code> yazın ve  enter tuşuna basın.</li>
+<li>Açılan ekranda install butonunu bulun ve yükleyin.</li>
+</ol>
+<h2 id="sublime-text">SUBLIME TEXT</h2>
+<p><img src="/img/sublime-text.png" alt="sublime-text" /></p>
+<p><strong>Website:</strong>
+<a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></p>
+<ol>
+<li>Sublime Text i resmi sitesinden indiriyoruz ve kurulumu sağlıyoruz.</li>
+<li>Sublime Text&rsquo;i açıp <code>CTRL + SHIFT + P</code> tuş kombinasyonu ile hızlı erişim paletini açıyoruz.</li>
+<li>açılan kısma <code>install package control</code>  yazıp <code>enter</code> tuşuna basarak Package Control kurulumu yapıyoruz.</li>
+<li><a href="https://packagecontrol.io/search/go%20">https://packagecontrol.io/search/go%20</a> adresinden gerekli go paketlerini buluyoruz.</li>
+<li>Buradan <code>LSP</code> isimli paketi buluyoruz ve ayarlarını GO için düzenliyoruz.</li>
+<li>Sublime Text ekranını açıp <code>CTRL + SHIFT + P</code> &lsquo;e basın ve <code>install package</code> yazın. Açılan ekranda bulduğunuz GO paketlerinin isimlerini yazıp kurulumu tamamlayın.</li>
+</ol>
+<h2 id="notepad">NOTEPAD++</h2>
+<p>Windows kullanıcıları için geliştirme yapabilecekleri bir başka editör de Notepad++ editörüdür.</p>
 </article>
  
       
@@ -389,7 +430,13 @@ select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vscode">VSCODE</a></li>
+    <li><a href="#sublime-text">SUBLIME TEXT</a></li>
+    <li><a href="#notepad">NOTEPAD++</a></li>
+  </ul>
+</nav>
 
 
  

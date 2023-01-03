@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama diline ve de birçok programlama diline başlayanların ilk olarak yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.
+<meta name="description" content="HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama dili ve birçok programlama dilinde kodlamaya başlayanların ilk yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.
 Bu örnekte GO programlama dilinin çalışma mantığını öğreneceksiniz.
 package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, World&#34;) } Şimdi örneğimizi parçalarına ayırarak incelemeye başlayalım.
-package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
-GO programlama dilinde paket modül mimarisi mevcuttur.  ">
+Programın İncelenmesi package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
+GO programlama dilinde paket modül mimarisi mevcuttur.  import import &#34;fmt&#34; Bu satırda yer alan fmt isimli paketi kullanmak üzere import (ithal etmek, içeri sokmak) ediyoruz.">
 <meta name="theme-color" content="#FFFFFF">
-<meta name="color-scheme" content="light dark"><meta property="og:title" content="Hello World Uygulaması " />
-<meta property="og:description" content="HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama diline ve de birçok programlama diline başlayanların ilk olarak yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="4. Hello World Uygulaması " />
+<meta property="og:description" content="HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama dili ve birçok programlama dilinde kodlamaya başlayanların ilk yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.
 Bu örnekte GO programlama dilinin çalışma mantığını öğreneceksiniz.
 package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, World&#34;) } Şimdi örneğimizi parçalarına ayırarak incelemeye başlayalım.
-package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
-GO programlama dilinde paket modül mimarisi mevcuttur.  " />
+Programın İncelenmesi package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
+GO programlama dilinde paket modül mimarisi mevcuttur.  import import &#34;fmt&#34; Bu satırda yer alan fmt isimli paketi kullanmak üzere import (ithal etmek, içeri sokmak) ediyoruz." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/docs/posts/hello-world/" />
 
-<title>Hello World Uygulaması  | Golang Cookbook by GOKAYBURUC</title>
+<title>4. Hello World Uygulaması  | Golang Cookbook by GOKAYBURUC</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.2d9ad00dc8025c6dba3558ad355da7dcfa650c2fbfaccea13436ffa1c3e6aab3.js" integrity="sha256-LZrQDcgCXG26NVitNV2n3PplDC&#43;/rM6hNDb/ocPmqrM=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.8d3d72aa404949eab6aec47a2a3d46b07cceec23c49744a142fbda4449ea9109.js" integrity="sha256-jT1yqkBJSeq2rsR6Kj1GsHzO7CPEl0ShQvvaREnqkQk=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -75,7 +75,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/hello-world/" class="active">Hello World Uygulaması </a>
+    <a href="/docs/posts/go-setup/" class="">1. GO Kurulumu</a>
   
 
         </li>
@@ -88,7 +88,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/data-types/" class="">Veri Tipleri (Data Types) </a>
+    <a href="/docs/posts/text-editor-setup/" class="">2. Metin Editörü Kurulumu</a>
   
 
         </li>
@@ -101,7 +101,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/variables/" class="">Değişkenler (Variables)</a>
+    <a href="/docs/posts/go-ide/" class="">3. GO IDE&#39;leri ve Kurulumları </a>
   
 
         </li>
@@ -114,7 +114,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/constants/" class="">Sabitler (Constants)</a>
+    <a href="/docs/posts/hello-world/" class="active">4. Hello World Uygulaması </a>
   
 
         </li>
@@ -127,7 +127,46 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/switch-case/" class="">Anahtar Durum İfadeleri (Switch Case )</a>
+    <a href="/docs/posts/variables/" class="">5. Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/closures/" class=""> Kapalı Fonksiyonlar - Closures</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="">6. Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="">7. Sabitler (Constants)</a>
   
 
         </li>
@@ -142,7 +181,22 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/arrays/" class="">Diziler - Arrays</a>
+    <a href="/docs/posts/arrays/" class="">8. Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">9. Dilimler - Slices </a>
   
 
         </li>
@@ -155,7 +209,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/loops/" class="">Döngüler (Loops)</a>
+    <a href="/docs/posts/operators/" class="">10. Operatörler - Operators</a>
   
 
         </li>
@@ -168,7 +222,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/functions/" class="">Fonksiyonlar (Functions)</a>
+    <a href="/docs/posts/functions/" class="">11. Fonksiyonlar (Functions)</a>
   
 
         </li>
@@ -181,7 +235,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/operators/" class="">Operatörler - Operators</a>
+    <a href="/docs/posts/conditionals/" class="">12. Şartlı İfadeler (If - Else Conditionals)</a>
   
 
         </li>
@@ -194,7 +248,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/conditionals/" class="">Şartlı İfadeler (If - Else Conditionals)</a>
+    <a href="/docs/posts/switch-case/" class="">13. Anahtar Durum İfadeleri (Switch Case )</a>
   
 
         </li>
@@ -207,14 +261,10 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/posts/slices/" class="">Dilimler - Slices </a>
+    <a href="/docs/posts/loops/" class="">14. Döngüler (Loops)</a>
   
 
         </li>
-      
-    
-      
-    
       
     
       
@@ -279,7 +329,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Hello World Uygulaması </strong>
+  <strong>4. Hello World Uygulaması </strong>
 
   <label for="toc-control">
     
@@ -295,7 +345,14 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#package-main">package main</a></li>
+    <li><a href="#programın-incelenmesi">Programın İncelenmesi</a>
+      <ul>
+        <li><a href="#package-main">package main</a></li>
+        <li><a href="#import">import</a></li>
+        <li><a href="#func-main">func main()</a></li>
+      </ul>
+    </li>
+    <li><a href="#programın-çalıştırılması">Programın Çalıştırılması</a></li>
   </ul>
 </nav>
 
@@ -309,7 +366,7 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="hello-world-merhaba-dünya-uygulamasi">HELLO WORLD (MERHABA DÜNYA) UYGULAMASI</h1>
-<p>GO programlama diline ve de birçok programlama diline başlayanların ilk olarak yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.</p>
+<p>GO programlama dili ve birçok programlama dilinde kodlamaya başlayanların ilk yaptıkları şey, ekranda &ldquo;hello world!&rdquo; yazısının yazdırılmasıdır.</p>
 <p>Bu örnekte GO programlama dilinin çalışma mantığını öğreneceksiniz.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>  
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>  
@@ -317,13 +374,76 @@ https://github.com/alex-shpak/hugo-book
    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, World&#34;</span>)  
 }  
 </code></pre></div><p>Şimdi örneğimizi parçalarına ayırarak incelemeye başlayalım.</p>
-<h2 id="package-main">package main</h2>
+<h2 id="programın-incelenmesi">Programın İncelenmesi</h2>
+<h3 id="package-main">package main</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 </code></pre></div><p>Bu ifade paket deklerasyonu (package declaration) ifadesidir.</p>
 <blockquote class="book-hint info">
   GO programlama dilinde paket modül mimarisi mevcuttur.
 </blockquote>
 
+<h3 id="import">import</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</code></pre></div><p>Bu satırda yer alan <code>fmt</code> isimli paketi kullanmak üzere import (ithal etmek, içeri sokmak) ediyoruz. Yani bu paket içerisinde yer alan tüm fonksiyon ve modülleri kullanıma açıyoruz ve bu bilgiyi GO diline bildiriyoruz.</p>
+<blockquote class="book-hint info">
+  <code>fmt</code> isimli modül, built-in format paketidir.Yani programda kurulum gerektirmeden varolan ve ekrana veri yazdırma işlemleri sırasında metin biçimlendirme işlemlerinin yapılabildiği pakettir.
+</blockquote>
+
+<p>Derleyici (<code>compiler</code>) bizim adımıza  varsayılan (<code>built-in</code>) paketlere giderek  <code>fmt</code> isimli paketi ve bu pakete bağlı <code>module</code> ve <code>function</code> ifadelerini kullanılmak üzere hazırda bekletiliyor.</p>
+<blockquote class="book-hint info">
+  <strong>COMPILER:</strong>
+Derleyici, bir programlama dilinde (kaynak dil <code>source language</code>) yazılmış bilgisayar kodunu başka bir dile (hedef dil <code>target language</code>) çeviren bir bilgisayar programıdır.
+</blockquote>
+
+<p>Bizim örneğimizde derleyici GO kaynak dilinde yazılmış kodları binary makine diline çevirip işlemleri gerçekleştirir.</p>
+<ul>
+<li><strong>Kaynak Dil (source language):</strong> GO</li>
+<li><strong>Hedef Dil (target language):</strong> 1 ve 0 &lsquo;lardan oluşan Makine Dili  (Binary)</li>
+</ul>
+<h3 id="func-main">func main()</h3>
+<p><code>main</code> isimli fonksiyon sistem içinde derlenen tüm kodların çalıştırıldığı dahili başlatıcı fonksiyondur.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+}
+</code></pre></div><blockquote class="book-hint warning">
+  <strong>UYARI:</strong>
+GO projelerinizi derlerken tüm yazdığınız kodlar, <code>package main</code> paketi altında ve <code>func main(){}</code> de çağrılma sırasına göre derlenir.
+</blockquote>
+
+<h2 id="programın-çalıştırılması">Programın Çalıştırılması</h2>
+<p>İlk olarak bir klasör linux terminalizden yeni bir klasör oluşturuyoruz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir hello-world
+</code></pre></div><p>Şimdi klasörümüzün içine giriyoruz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd hello-world
+</code></pre></div><p>Projemizin bir GO klasörü olduğunu ve modüllerin derleneceğini belirtmek için aşağıdaki komutu yazıyoruz. burada <code>hello.world</code> bizim klasörümüzün modül ismidir. <code>go mod init</code> ise GO dilinde bu isimde bir modül başlatacılacağını belirtir. GO programı bu klasördeki dosyaları GO kurallarına göre derler.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go mod init hello.world
+</code></pre></div><blockquote class="book-hint warning">
+  Klasörünüze baktığınızda <code>go mod</code> isimli bir dosya oluştuğunu göreceksiniz. Bu dosya modüle ait bilgileri ve dışarıdan çağrılan paketlerin bilgilerinin yer aldığı dosyadır.
+</blockquote>
+
+<p><code>go.mod</code> isimli dosyayı incelediğimizde aşağıdaki bilgileri göreceksiniz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">module</span> <span style="color:#a6e22e">hello</span>.<span style="color:#a6e22e">world</span>
+<span style="color:#66d9ef">go</span> <span style="color:#ae81ff">1.19</span>
+</code></pre></div><ul>
+<li><code>module hello.world</code> işlemlerin yapıldığı ve saklanacağı modülün ismini belirtir.</li>
+<li><code>go 1.19</code> ise derleyici olan GO &lsquo;nun versiyon bilgisidir.</li>
+</ul>
+<blockquote class="book-hint warning">
+  <strong>HATIRLATMA:</strong>
+Eğer modülümüze dışarıdan bir paket veya modül çağırılırsa, <code>go mod</code> içerisinde çağrılan modüle ait modül bilgileri yer alacaktır.
+</blockquote>
+
+<p>Bir sonraki basamakta <code>Hello.go</code> isimli bir dosya oluşturup içine aşağıdaki kodları yazın ve kaydedin.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>  
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>  
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {  
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, World&#34;</span>)  
+}  
+</code></pre></div><p>İşlem bitişinde yazdığımız kodları terminalden çalıştıralım.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go run Hello.go
+</code></pre></div><p>Terminal ekranında aşağıdaki çıktıyı göreceksiniz.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hello, World!
+</code></pre></div><hr>
 </article>
  
       
@@ -367,7 +487,14 @@ select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#package-main">package main</a></li>
+    <li><a href="#programın-incelenmesi">Programın İncelenmesi</a>
+      <ul>
+        <li><a href="#package-main">package main</a></li>
+        <li><a href="#import">import</a></li>
+        <li><a href="#func-main">func main()</a></li>
+      </ul>
+    </li>
+    <li><a href="#programın-çalıştırılması">Programın Çalıştırılması</a></li>
   </ul>
 </nav>
 

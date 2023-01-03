@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GO Kurulumu Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz.
+WEBSITE https://go.dev/dl/
+ Linux Elle Kurulum  https://go.dev/dl/ web sitesine gidilir ve ilgili Linux sürümü bulunur.  UYARI: Eğer sisteminizde daha önceden yüklü bir sürüm varsa bu sürümü silin.  Aşağıdaki kod sistemde /usr/local/go adresi içerisinde yer alan sürümü kaldırır ve aynı klasörün içine go1.19.4.linux-amd64.tar.gz isimli indirdiğimizi tar dosyasını aynı klasöre açar.
+sudo rm -rf /usr/local/go &amp;&amp; tar -C /usr/local -xzf go1.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="1. GO Kurulumu" />
+<meta property="og:description" content="GO Kurulumu Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz.
+WEBSITE https://go.dev/dl/
+ Linux Elle Kurulum  https://go.dev/dl/ web sitesine gidilir ve ilgili Linux sürümü bulunur.  UYARI: Eğer sisteminizde daha önceden yüklü bir sürüm varsa bu sürümü silin.  Aşağıdaki kod sistemde /usr/local/go adresi içerisinde yer alan sürümü kaldırır ve aynı klasörün içine go1.19.4.linux-amd64.tar.gz isimli indirdiğimizi tar dosyasını aynı klasöre açar.
+sudo rm -rf /usr/local/go &amp;&amp; tar -C /usr/local -xzf go1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/posts/go-setup/" />
+
+<title>1. GO Kurulumu | Golang Cookbook by GOKAYBURUC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.7a5c2133ccf08c17d1c20d659cfe528c9887e325c9bd16bab403b9983403ef67.css" integrity="sha256-elwhM8zwjBfRwg1lnP5SjJiH4yXJvRa6tAO5mDQD72c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.8d3d72aa404949eab6aec47a2a3d46b07cceec23c49744a142fbda4449ea9109.js" integrity="sha256-jT1yqkBJSeq2rsR6Kj1GsHzO7CPEl0ShQvvaREnqkQk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/img/golang_logo_icon.png" alt="Logo" /><span>Golang Cookbook by GOKAYBURUC</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/go-setup/" class="active">1. GO Kurulumu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/text-editor-setup/" class="">2. Metin Editörü Kurulumu</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/go-ide/" class="">3. GO IDE&#39;leri ve Kurulumları </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/hello-world/" class="">4. Hello World Uygulaması </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/variables/" class="">5. Değişkenler (Variables)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/closures/" class=""> Kapalı Fonksiyonlar - Closures</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/data-types/" class="">6. Veri Tipleri (Data Types) </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/constants/" class="">7. Sabitler (Constants)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/arrays/" class="">8. Diziler - Arrays</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/slices/" class="">9. Dilimler - Slices </a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/operators/" class="">10. Operatörler - Operators</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/functions/" class="">11. Fonksiyonlar (Functions)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/conditionals/" class="">12. Şartlı İfadeler (If - Else Conditionals)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/switch-case/" class="">13. Anahtar Durum İfadeleri (Switch Case )</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/posts/loops/" class="">14. Döngüler (Loops)</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>1. GO Kurulumu</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux">Linux</a>
+      <ul>
+        <li><a href="#elle-kurulum">Elle Kurulum</a></li>
+        <li><a href="#snap-kurulumu">snap Kurulumu</a></li>
+      </ul>
+    </li>
+    <li><a href="#windows">Windows</a></li>
+    <li><a href="#mac">Mac</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="go-kurulumu">GO Kurulumu</h1>
+<p>Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz.</p>
+<p><img src="/img/official-go.png" alt="official-go" /></p>
+<p><strong>WEBSITE</strong>
+<a href="https://go.dev/dl/">https://go.dev/dl/</a></p>
+<hr>
+<h2 id="linux">Linux</h2>
+<h3 id="elle-kurulum">Elle Kurulum</h3>
+<ol>
+<li><a href="https://go.dev/dl/">https://go.dev/dl/</a> web sitesine gidilir ve ilgili Linux sürümü bulunur.</li>
+</ol>
+<blockquote class="book-hint warning">
+  <strong>UYARI:</strong> Eğer sisteminizde daha önceden yüklü bir sürüm varsa bu sürümü silin.
+</blockquote>
+
+<p>Aşağıdaki kod sistemde <code>/usr/local/go</code> adresi içerisinde yer alan sürümü kaldırır ve aynı klasörün içine <code>go1.19.4.linux-amd64.tar.gz</code> isimli indirdiğimizi tar dosyasını aynı klasöre açar.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rm -rf /usr/local/go <span style="color:#f92672">&amp;&amp;</span> tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
+</code></pre></div><blockquote class="book-hint danger">
+  <strong>DİKKAT:</strong>
+Asla mevcut sürümü  <code>/usr/local/go</code> klasörünü tamamen silip kaldırmadan aynı klasöre <strong>tar</strong> dosyasını açmayın.
+</blockquote>
+
+<ol start="2">
+<li>PATH ortam değişkenine <code>/usr/local/go/bin</code> ekleyin.</li>
+</ol>
+<p>Bunu <code>$HOME/.profile</code> veya <code>/etc/profile</code> dosyanıza aşağıdaki satırı ekleyerek yapabilirsiniz (sistem çapında bir kurulum için):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PATH<span style="color:#f92672">=</span>$PATH:/usr/local/go/bin
+</code></pre></div><blockquote class="book-hint warning">
+  Not: Bir profil dosyasında yapılan değişiklikler, bilgisayarınızda bir sonraki oturum açışınıza kadar geçerli olmayabilir. Değişiklikleri hemen uygulamak için doğrudan kabuk komutlarını çalıştırın veya bunları  <code>$HOME/.profile</code> gibi bir komut kullanarak profilden yürütün.
+</blockquote>
+
+<ol start="3">
+<li>Bir komut istemi açıp aşağıdaki komutu yazarak Go&rsquo;yu yüklediğinizi doğrulayın.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go version
+</code></pre></div><ol start="4">
+<li>Komutun yüklü Go sürümünü yazdırdığını onaylayın.<code>go version</code> Ekran çıktısı aşağıdakine benzer olmalıdır.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go version go1.19.4 linux/amd64
+</code></pre></div><h3 id="snap-kurulumu">snap Kurulumu</h3>
+<ol>
+<li>İlk olarak snap içerisinde ilgili go sürümünü arayın.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">snap search go
+</code></pre></div><p>Çıktı aşağıdakine benzer şekilde olmalıdır.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Name                                  Version                      Publisher           Notes    Summary
+go                                    1.19.4                       mwhudson            classic  Go programming language compiler, linker, stdlib
+</code></pre></div><ol start="2">
+<li>snap üzerinden GO  indir.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">snap install go
+</code></pre></div><hr>
+<h2 id="windows">Windows</h2>
+<ol>
+<li>
+<p>İlgili windows MSI dosyasını indirin.</p>
+</li>
+<li>
+<p>İndirdiğiniz MSI dosyasını açın ve Go&rsquo;yu yüklemek için talimatları izleyin.</p>
+</li>
+<li>
+<p>Varsayılan olarak yükleyici, Program Dosyalarına Git veya Program Dosyalarına (x86) kuracaktır. Konumu gerektiği gibi değiştirebilirsiniz.</p>
+</li>
+<li>
+<p>Kurduktan sonra, yükleyici tarafından ortamda yapılan değişikliklerin komut istemine yansıtılması için tüm açık komut istemlerini kapatıp yeniden açmanız gerekir.</p>
+</li>
+<li>
+<p>Go&rsquo;yu yüklediğinizi doğrulayın.</p>
+</li>
+<li>
+<p>Windows&rsquo;ta, Başlat menüsüne tıklayın.</p>
+</li>
+<li>
+<p>Menünün arama kutusuna cmd yazın ve ardından Enter tuşuna basın.</p>
+</li>
+<li>
+<p>Görünen Komut İstemi penceresinde aşağıdaki komutu yazın:</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go version
+</code></pre></div><ol start="9">
+<li>Komutun yüklü Go sürümünü yazdırdığını onaylayın.</li>
+</ol>
+<hr>
+<h2 id="mac">Mac</h2>
+<ol>
+<li>İndirdiğiniz paket dosyasını açın ve Go&rsquo;yu yüklemek için talimatları izleyin.</li>
+<li>Paket, Go dağıtımını <code>/usr/local/go</code> konumuna kurar. Paket <code>/usr/local/go/bin</code>dizinini PATH ortam değişkeninize konulmalıdır.</li>
+<li>Değişikliğin etkili olması için tüm açık Terminal oturumlarını yeniden başlatmanız gerekebilir.</li>
+<li>Bir komut istemi açıp aşağıdaki komutu yazarak Go&rsquo;yu yüklediğinizi doğrulayın:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go version
+</code></pre></div><ol>
+<li>Komutun yüklü Go sürümünü yazdırdığını onaylayın.</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){if(window.getSelection().toString()){return;}
+select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux">Linux</a>
+      <ul>
+        <li><a href="#elle-kurulum">Elle Kurulum</a></li>
+        <li><a href="#snap-kurulumu">snap Kurulumu</a></li>
+      </ul>
+    </li>
+    <li><a href="#windows">Windows</a></li>
+    <li><a href="#mac">Mac</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

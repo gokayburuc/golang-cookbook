@@ -3,11 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/docs/posts/hello-world/</loc>
+    <loc>http://example.org/docs/posts/go-setup/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/docs/posts/data-types/</loc>
+    <loc>http://example.org/docs/posts/text-editor-setup/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/go-ide/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/hello-world/</loc>
   </url>
   
   <url>
@@ -15,15 +23,19 @@
   </url>
   
   <url>
+    <loc>http://example.org/docs/posts/closures/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/data-types/</loc>
+  </url>
+  
+  <url>
     <loc>http://example.org/docs/posts/constants/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/docs/posts/switch-case/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/docs/posts/closures/</loc>
+    <loc>http://example.org/docs/posts/errors/</loc>
   </url>
   
   <url>
@@ -31,19 +43,7 @@
   </url>
   
   <url>
-    <loc>http://example.org/docs/posts/loops/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/docs/posts/functions/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/docs/posts/operators/</loc>
-  </url>
-  
-  <url>
-    <loc>http://example.org/docs/posts/conditionals/</loc>
+    <loc>http://example.org/docs/posts/channels/</loc>
   </url>
   
   <url>
@@ -51,11 +51,23 @@
   </url>
   
   <url>
-    <loc>http://example.org/docs/posts/channels/</loc>
+    <loc>http://example.org/docs/posts/operators/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/docs/posts/errors/</loc>
+    <loc>http://example.org/docs/posts/functions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/conditionals/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/switch-case/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/docs/posts/loops/</loc>
   </url>
   
   <url>

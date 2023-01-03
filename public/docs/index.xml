@@ -11,31 +11,53 @@
     
     
     <item>
-      <title>Hello World Uygulaması </title>
+      <title>1. GO Kurulumu</title>
+      <link>http://example.org/docs/posts/go-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/go-setup/</guid>
+      <description>GO Kurulumu Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz.
+WEBSITE https://go.dev/dl/
+ Linux Elle Kurulum  https://go.dev/dl/ web sitesine gidilir ve ilgili Linux sürümü bulunur.  UYARI: Eğer sisteminizde daha önceden yüklü bir sürüm varsa bu sürümü silin.  Aşağıdaki kod sistemde /usr/local/go adresi içerisinde yer alan sürümü kaldırır ve aynı klasörün içine go1.19.4.linux-amd64.tar.gz isimli indirdiğimizi tar dosyasını aynı klasöre açar.
+sudo rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.</description>
+    </item>
+    
+    <item>
+      <title>2. Metin Editörü Kurulumu</title>
+      <link>http://example.org/docs/posts/text-editor-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/text-editor-setup/</guid>
+      <description>Metin Editörü Kurulumu Birden çok ortamda geliştirme yapma imkanınız mevcuttur. Hatta hiçbir özel program indirmeden dahi sisteminizde kurulu olan metin editörlerinden geliştirme yapabilirsiniz. Fakat VSCode ve Sublime Text gibi metin editörleri otomatik biçimlendirme, kod hatalarını görüntüleme gibi GO özelliklerini desteklediği için kodlama sürenizi muazzam ölçüde düşürecektir.
+VSCODE WEBSITE: https://code.visualstudio.com/
+GO programlama diliyle ilgili en fazla desteğe sahip editördür. Hatta desteklediği özellikler sayesinde en kapsamlı editördür de denilebilir.
+gopls : Format, hata ve diğer özelliklerin denetlendiği kütüphanedir.</description>
+    </item>
+    
+    <item>
+      <title>3. GO IDE&#39;leri ve Kurulumları </title>
+      <link>http://example.org/docs/posts/go-ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/go-ide/</guid>
+      <description>GO IDE </description>
+    </item>
+    
+    <item>
+      <title>4. Hello World Uygulaması </title>
       <link>http://example.org/docs/posts/hello-world/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/docs/posts/hello-world/</guid>
-      <description>HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama diline ve de birçok programlama diline başlayanların ilk olarak yaptıkları şey, ekranda &amp;ldquo;hello world!&amp;rdquo; yazısının yazdırılmasıdır.
+      <description>HELLO WORLD (MERHABA DÜNYA) UYGULAMASI GO programlama dili ve birçok programlama dilinde kodlamaya başlayanların ilk yaptıkları şey, ekranda &amp;ldquo;hello world!&amp;rdquo; yazısının yazdırılmasıdır.
 Bu örnekte GO programlama dilinin çalışma mantığını öğreneceksiniz.
 package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, World&amp;#34;) } Şimdi örneğimizi parçalarına ayırarak incelemeye başlayalım.
-package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
-GO programlama dilinde paket modül mimarisi mevcuttur.  </description>
+Programın İncelenmesi package main package main Bu ifade paket deklerasyonu (package declaration) ifadesidir.
+GO programlama dilinde paket modül mimarisi mevcuttur.  import import &amp;#34;fmt&amp;#34; Bu satırda yer alan fmt isimli paketi kullanmak üzere import (ithal etmek, içeri sokmak) ediyoruz.</description>
     </item>
     
     <item>
-      <title>Veri Tipleri (Data Types) </title>
-      <link>http://example.org/docs/posts/data-types/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/posts/data-types/</guid>
-      <description>GO Dilinde Veri Tipleri (Data Types in GO) GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.
- Varsayılan veri tipleri program kurulduğu an itibariyle tanımlı olan veri tipleridir.    Kullanıcı tanımlı veri tipleri ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.   Veri Tiplerinin Gruplanması Genel olarak veri tipleri dört ana başlık altında toplanabilir
- Basic type (Temel Veri Tipi ) : Sayılar, metin ve bool ifadeler bu kategoriye girer.</description>
-    </item>
-    
-    <item>
-      <title>Değişkenler (Variables)</title>
+      <title>5. Değişkenler (Variables)</title>
       <link>http://example.org/docs/posts/variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -43,28 +65,6 @@ GO programlama dilinde paket modül mimarisi mevcuttur.  </description>
       <description>Değişkenler (Variables) Değişken ( Variable ) , bir değeri tutmak için bir depolama konumudur. İzin verilen değerler kümesi, değişkenin türüne göre belirlenir.
 // string degisken turu var isim string = &amp;#34;Gokay&amp;#34; Yani elimizde isim diye bir değişken olduğunu var sayalım. İzin verilen deger olarak degisken türü dikkate alındığında string type bir ifade olduğunu düşünürsek bu ifade yalnızca string veri tipinde tutulabilir. Yani yazı olarak saklanabilir.
  string olarak saklanan bir değişkene, bir tam sayı integer veya ondalıklı sayı float değer verirsek, veyahut mantıksal bool bir ifade verirsek sistemden hata alırız.</description>
-    </item>
-    
-    <item>
-      <title>Sabitler (Constants)</title>
-      <link>http://example.org/docs/posts/constants/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/posts/constants/</guid>
-      <description>Sabitler (Constants) Constant ifadeler sabitler olarak bilinirler. Değişken ifadelerinden farklı olarak, bir defa değer atandığı an itibariyle sistemde sabit kalırlar. İşleme tabi tutulsalar dahi, işlem bitişinde yine değerleri sabit olmaktadır.
-Yazım Biçimi - Snytax const ifade = deger HATIRLATMA: const ifadeleri scope içinde ve dışında tanımlanabilir.  const İfadelerin Veri Türleri const ifadeler aşağıda yer alan tüm veri tiplerinde veri taşıyabilirler.
- Integer - int Float - float32, float64 vs. String - string Boolean - bool Character - tek bir karakter  const İfadelerin Kullanımı GeeksForGeeks web sitesinden alınan örnek ifade aşağıda verilmiştir.</description>
-    </item>
-    
-    <item>
-      <title>Anahtar Durum İfadeleri (Switch Case )</title>
-      <link>http://example.org/docs/posts/switch-case/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/posts/switch-case/</guid>
-      <description>Anahtar Durum İfadeleri (Switch Case) Switch ifadesi, çok yollu bir dal ifadesidir. İfadenin değerine dayalı olarak yürütmeyi bir kodun farklı bölümlerine aktarmak için etkili bir yol sağlar. Basit bir ifade ile demiryolu makası gibi düşünülebilir.
-Go dili, iki tür anahtar deyimini destekler:
- İfade Switch Tip Switch  İfade Switch İfade switch, C, C++, Java dilindeki switch ifadesine benzer. İfadenin değerine bağlı olarak yürütmeyi kodun farklı bölümlerine göndermenin kolay bir yolunu sağlar.</description>
     </item>
     
     <item>
@@ -77,7 +77,38 @@ Go dili, iki tür anahtar deyimini destekler:
     </item>
     
     <item>
-      <title>Diziler - Arrays</title>
+      <title>6. Veri Tipleri (Data Types) </title>
+      <link>http://example.org/docs/posts/data-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/data-types/</guid>
+      <description>GO Dilinde Veri Tipleri (Data Types in GO) GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.
+ Varsayılan veri tipleri program kurulduğu an itibariyle tanımlı olan veri tipleridir.    Kullanıcı tanımlı veri tipleri ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.   Veri Tiplerinin Gruplanması Genel olarak veri tipleri dört ana başlık altında toplanabilir
+ Basic type (Temel Veri Tipi ) : Sayılar, metin ve bool ifadeler bu kategoriye girer.</description>
+    </item>
+    
+    <item>
+      <title>7. Sabitler (Constants)</title>
+      <link>http://example.org/docs/posts/constants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/constants/</guid>
+      <description>Sabitler (Constants) Constant ifadeler sabitler olarak bilinirler. Değişken ifadelerinden farklı olarak, bir defa değer atandığı an itibariyle sistemde sabit kalırlar. İşleme tabi tutulsalar dahi, işlem bitişinde yine değerleri sabit olmaktadır.
+Yazım Biçimi - Snytax const ifade = deger HATIRLATMA: const ifadeleri scope içinde ve dışında tanımlanabilir.  const İfadelerin Veri Türleri const ifadeler aşağıda yer alan tüm veri tiplerinde veri taşıyabilirler.
+ Integer - int Float - float32, float64 vs. String - string Boolean - bool Character - tek bir karakter  const İfadelerin Kullanımı GeeksForGeeks web sitesinden alınan örnek ifade aşağıda verilmiştir.</description>
+    </item>
+    
+    <item>
+      <title> Hatalar - Errors</title>
+      <link>http://example.org/docs/posts/errors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/errors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>8. Diziler - Arrays</title>
       <link>http://example.org/docs/posts/arrays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -86,18 +117,34 @@ Go dili, iki tür anahtar deyimini destekler:
     </item>
     
     <item>
-      <title>Döngüler (Loops)</title>
-      <link>http://example.org/docs/posts/loops/</link>
+      <title>Channels - Kanallar</title>
+      <link>http://example.org/docs/posts/channels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/posts/loops/</guid>
-      <description>Döngüler (Loops) GO programlama dilinde tek bir döngü mevcuttur; bu da for döngüsüdür. Bu döngü C, C++, Java, C# dillerindeki ile benzerlik göstermektedir. #java #cplusplus #csharp #c
-Yazım Biçimi (Syntax) Yazım şekli de aşağıdaki gibidir.
-for initialization; condition; post{ // statements.... }  Başlatma ifadesi (intialization) : Başlatma ifadesi isteğe bağlıdır ve for döngüsü başlamadan önce yürütülür. Başlatma ifadesi her zaman değişken bildirimleri, artış veya atama ifadeleri veya işlev çağrıları gibi basit bir ifadededir.</description>
+      <guid>http://example.org/docs/posts/channels/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Fonksiyonlar (Functions)</title>
+      <title>9. Dilimler - Slices </title>
+      <link>http://example.org/docs/posts/slices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/slices/</guid>
+      <description>Dilimler (Slices) </description>
+    </item>
+    
+    <item>
+      <title>10. Operatörler - Operators</title>
+      <link>http://example.org/docs/posts/operators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/posts/operators/</guid>
+      <description>Operatörler - Operators </description>
+    </item>
+    
+    <item>
+      <title>11. Fonksiyonlar (Functions)</title>
       <link>http://example.org/docs/posts/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -108,16 +155,7 @@ HATIRLATMA: Giriş parametreleri fonksiyonlarda argüman olarak adlandırılırl
     </item>
     
     <item>
-      <title>Operatörler - Operators</title>
-      <link>http://example.org/docs/posts/operators/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/posts/operators/</guid>
-      <description>Operatörler - Operatörs </description>
-    </item>
-    
-    <item>
-      <title>Şartlı İfadeler (If - Else Conditionals)</title>
+      <title>12. Şartlı İfadeler (If - Else Conditionals)</title>
       <link>http://example.org/docs/posts/conditionals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -126,30 +164,25 @@ HATIRLATMA: Giriş parametreleri fonksiyonlarda argüman olarak adlandırılırl
     </item>
     
     <item>
-      <title>Dilimler - Slices </title>
-      <link>http://example.org/docs/posts/slices/</link>
+      <title>13. Anahtar Durum İfadeleri (Switch Case )</title>
+      <link>http://example.org/docs/posts/switch-case/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/posts/slices/</guid>
-      <description>Dilimler (Slices) </description>
+      <guid>http://example.org/docs/posts/switch-case/</guid>
+      <description>Anahtar Durum İfadeleri (Switch Case) Switch ifadesi, çok yollu bir dal ifadesidir. İfadenin değerine dayalı olarak yürütmeyi bir kodun farklı bölümlerine aktarmak için etkili bir yol sağlar. Basit bir ifade ile demiryolu makası gibi düşünülebilir.
+Go dili, iki tür anahtar deyimini destekler:
+ İfade Switch Tip Switch  İfade Switch İfade switch, C, C++, Java dilindeki switch ifadesine benzer. İfadenin değerine bağlı olarak yürütmeyi kodun farklı bölümlerine göndermenin kolay bir yolunu sağlar.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://example.org/docs/posts/channels/</link>
+      <title>14. Döngüler (Loops)</title>
+      <link>http://example.org/docs/posts/loops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/posts/channels/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://example.org/docs/posts/errors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/docs/posts/errors/</guid>
-      <description></description>
+      <guid>http://example.org/docs/posts/loops/</guid>
+      <description>Döngüler (Loops) GO programlama dilinde tek bir döngü mevcuttur; bu da for döngüsüdür. Bu döngü C, C++, Java, C# dillerindeki ile benzerlik göstermektedir. #java #cplusplus #csharp #c
+Yazım Biçimi (Syntax) Yazım şekli de aşağıdaki gibidir.
+for initialization; condition; post{ // statements.... }  Başlatma ifadesi (intialization) : Başlatma ifadesi isteğe bağlıdır ve for döngüsü başlamadan önce yürütülür. Başlatma ifadesi her zaman değişken bildirimleri, artış veya atama ifadeleri veya işlev çağrıları gibi basit bir ifadededir.</description>
     </item>
     
     <item>

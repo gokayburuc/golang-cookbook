@@ -9,23 +9,20 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-# GO Kurulumu 
+# GO Kurulumu
 
-Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz. 
-
+Öncelikle resmi siteye giderek kurulum dosyalarını bulup indiriyoruz.
 
 ![official-go](/img/official-go.png)
 
 **WEBSITE**
 [https://go.dev/dl/](https://go.dev/dl/)
 
-
 ----------
 
-## Linux 
+## Linux
 
 ### Elle Kurulum
-
 
 1. [https://go.dev/dl/](https://go.dev/dl/) web sitesine gidilir ve ilgili Linux sürümü bulunur.
 
@@ -44,11 +41,11 @@ sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
 Asla mevcut sürümü  `/usr/local/go` klasörünü tamamen silip kaldırmadan aynı klasöre **tar** dosyasını açmayın.
 {{</hint>}}
 
-2.  PATH ortam değişkenine `/usr/local/go/bin` ekleyin.
+2. PATH ortam değişkenine `/usr/local/go/bin` ekleyin.
 
 Bunu `$HOME/.profile` veya `/etc/profile` dosyanıza aşağıdaki satırı ekleyerek yapabilirsiniz (sistem çapında bir kurulum için):
 
-```bash 
+```bash
 export PATH=$PATH:/usr/local/go/bin
 ```
 
@@ -60,11 +57,11 @@ Not: Bir profil dosyasında yapılan değişiklikler, bilgisayarınızda bir son
 
 3. Bir komut istemi açıp aşağıdaki komutu yazarak Go'yu yüklediğinizi doğrulayın.
 
-```bash 
+```bash
 go version
 ```
 
-4. Komutun yüklü Go sürümünü yazdırdığını onaylayın.`go version` Ekran çıktısı aşağıdakine benzer olmalıdır. 
+4. Komutun yüklü Go sürümünü yazdırdığını onaylayın.`go version` Ekran çıktısı aşağıdakine benzer olmalıdır.
 
 ```bash
 go version go1.19.4 linux/amd64
@@ -72,16 +69,15 @@ go version go1.19.4 linux/amd64
 
 ### snap Kurulumu
 
+1. İlk olarak snap içerisinde ilgili go sürümünü arayın.
 
-1. İlk olarak snap içerisinde ilgili go sürümünü arayın. 
-
-```bash 
+```bash
 snap search go
 ```
 
 Çıktı aşağıdakine benzer şekilde olmalıdır.
 
-```bash 
+```bash
 Name                                  Version                      Publisher           Notes    Summary
 go                                    1.19.4                       mwhudson            classic  Go programming language compiler, linker, stdlib
 ```
@@ -94,32 +90,35 @@ snap install go
 
 ----------
 
-
-## Windows 
+## Windows
 
 1. İlgili windows MSI dosyasını indirin.
 
 2. İndirdiğiniz MSI dosyasını açın ve Go'yu yüklemek için talimatları izleyin.
-3. Varsayılan olarak yükleyici, Program Dosyalarına Git veya Program Dosyalarına (x86) kuracaktır. Konumu gerektiği gibi değiştirebilirsiniz. 
+3. Varsayılan olarak yükleyici, Program Dosyalarına Git veya Program Dosyalarına (x86) kuracaktır. Konumu gerektiği gibi değiştirebilirsiniz.
 4. Kurduktan sonra, yükleyici tarafından ortamda yapılan değişikliklerin komut istemine yansıtılması için tüm açık komut istemlerini kapatıp yeniden açmanız gerekir.
 5. Go'yu yüklediğinizi doğrulayın.
 6. Windows'ta, Başlat menüsüne tıklayın.
 7. Menünün arama kutusuna cmd yazın ve ardından Enter tuşuna basın.
 8. Görünen Komut İstemi penceresinde aşağıdaki komutu yazın:
+
 ```bash
 go version
 ```
+
 9. Komutun yüklü Go sürümünü yazdırdığını onaylayın.
 
 ----------
 
-## Mac 
+## Mac
 
 1. İndirdiğiniz paket dosyasını açın ve Go'yu yüklemek için talimatları izleyin.
-2. Paket, Go dağıtımını `/usr/local/go` konumuna kurar. Paket `/usr/local/go/bin `dizinini PATH ortam değişkeninize konulmalıdır. 
+2. Paket, Go dağıtımını `/usr/local/go` konumuna kurar. Paket `/usr/local/go/bin`dizinini PATH ortam değişkeninize konulmalıdır.
 3. Değişikliğin etkili olması için tüm açık Terminal oturumlarını yeniden başlatmanız gerekebilir.
 4. Bir komut istemi açıp aşağıdaki komutu yazarak Go'yu yüklediğinizi doğrulayın:
+
 ```bash
 go version
 ```
+
 1. Komutun yüklü Go sürümünü yazdırdığını onaylayın.

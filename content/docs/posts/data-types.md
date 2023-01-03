@@ -14,21 +14,21 @@ weight: 6
 GO programlama dilinde veri tipleri varsayılan olarak mevcuttur. Ayrıca kullanıcılar tarafından da tanımlanabilirler.
 
 {{<hint info>}}
-- **Varsayılan veri tipleri**  program kurulduğu an itibariyle tanımlı olan veri tipleridir. 
+
+- **Varsayılan veri tipleri**  program kurulduğu an itibariyle tanımlı olan veri tipleridir.
 {{</hint>}}
 
 {{<hint info>}}
+
 - **Kullanıcı tanımlı veri tipleri** ise kullanıcı tarafından sisteme tanıtılan ve kullanılan veri tipleridir.
 
 {{</hint>}}
-
 
 ## Veri Tiplerinin Gruplanması
 
 Genel olarak veri tipleri dört ana başlık altında toplanabilir
 
 ![data-types](/img/datatypes.png)
-
 
 1. **Basic type (Temel Veri Tipi ) :** Sayılar, metin ve bool ifadeler bu kategoriye girer. *int, float, string, bool, complex*
 2. **Aggregate type (Toplanmış Veri Tipi):**  Dizi ve yapılar bu kategoriye girer. *array, struct*
@@ -45,11 +45,9 @@ Genel olarak veri tipleri dört ana başlık altında toplanabilir
 4. Boolean (*bool*)
 5. Complex(complex)
 
-
 ### Int (Integer-Tamsayı)
 
 Tam sayı değerlerlerinin program hafızasında tutulduğu veri tipidir.
-
 
 `int` tanımlaması aşağıdaki şekilde yapılır.
 
@@ -59,12 +57,11 @@ var degiskenAdi int = 32
 
 İkinci bir tanımlama yöntemi ise aşağıdaki şekildedir.
 
-```go 
+```go
 degiskenAdi := 35 
-``` 
+```
 
-Peki bu sayı tipleri GO programlama tipinde nasıl tanımlanır? Bir örnek ile konuyu açıklamaya çalışalım. 
-
+Peki bu sayı tipleri GO programlama tipinde nasıl tanımlanır? Bir örnek ile konuyu kısaca açıklamaya çalışayım.
 
 ```go
 package main 
@@ -72,26 +69,25 @@ import ("fmt")
 
 func main(){
 
-	var matematikNotu int8 = 85
-	var edebiyatNotu int8 = 92
-	fizikNotu = 65
+ var matematikNotu int8 = 85
+ var edebiyatNotu int8 = 92
+ fizikNotu = 65
 
-	fmt.Println(matematikNotu, edebiyatNotu, fizikNotu)
-	// ortalama 
-	fmt.Println((matematikNotu + edebiyatNotu + fizikNotu)/3)
+ fmt.Println(matematikNotu, edebiyatNotu, fizikNotu)
+ // ortalama 
+ fmt.Println((matematikNotu + edebiyatNotu + fizikNotu)/3)
 }
 ```
 
-Yukarıda tanımlandığı gibi sisteme `int` ifadesi ile bir değişken tanımladığımızda bu değişken sistem hafızasında `integer` olarak tutulur ve bu şekilde işlemlere dahil edilir. 
+Yukarıda tanımlandığı gibi sisteme `int` ifadesi ile bir değişken tanımladığımızda bu değişken sistem hafızasında `integer` olarak tutulur ve bu şekilde işlemlere dahil edilir.
 
-Yukarıdaki örnek incelendiğinde `matematikNotu` isimli bir `int` ifadesi tanımladık. Bu değerler 1 ile 100 arasında olacağından dolayı veri tipi olarak `int8` seçtik. Bu seçim sayılarımızın -127 ve 128 arasında olacağından dolayıdır. Aynı şekilde `edebiyatNotu` isimli bir `int8` ifade tanımladık. 
-
+Yukarıdaki örnek incelendiğinde `matematikNotu` isimli bir `int` ifadesi tanımladık. Bu değerler 1 ile 100 arasında olacağından dolayı veri tipi olarak `int8` seçtik. Bu seçim sayılarımızın -127 ve 128 arasında olacağından dolayıdır. Aynı şekilde `edebiyatNotu` isimli bir `int8` ifade tanımladık.
 
 #### Int Veri Tipinin Hafızada Kapladığı Yer
 
-Tanımladığımız verileriin hafızada kapladığı yer, programcıların en çok kafasını kurcalayan sorulardan biridir. Yazdığınız programın performansını etkiler ve bu sebeple bu temelin ne olduğu ile ilgili bir ön bilgi edinilmesi önemlidir.
+Tanımladığımız verilerilerin hafızada kapladığı yer, programcıların en çok kafasını kurcalayan sorulardan biridir. Yazdığınız programın performansını etkiler.
 
-Hafızada kapladığı yere ve oluşturulma usullerine göre `int` veri tipleri aşağıda yer almaktadır.
+Hafızada kapladığı yere göre `int` veri tipleri aşağıda yer almaktadır.
 
 | Veri Tipi   | Açıklama                                                                                                                            | Veri Aralığı                                                                          |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -100,7 +96,7 @@ Hafızada kapladığı yere ve oluşturulma usullerine göre `int` veri tipleri 
 | **int32**   | 32-bit signed integer                                                                                                               | -2147483648 to 2147483647 değerleri arasında yer alır                                 |
 | **int64**   | 64-bit signed integer                                                                                                               | -9,223,372,036,854,775,808 ve  9,223,372,036,854,775,807 değerleri arasında yer alır. |
 | **uint8**   | 8-bit unsigned integer                                                                                                              | 0 ve 255 değerleri arasında yer alır                                                  |
-| **uint16**  | 16-bit unsigned integer                                                                                                             | 0 ve 65535	değerleri arasında yer alır                                                |
+| **uint16**  | 16-bit unsigned integer                                                                                                             | 0 ve 65535 değerleri arasında yer alır                                                |
 | **uint32**  | 32-bit unsigned integer                                                                                                             | 0 ve 4294967295 değerleri arasında yer alır                                           |
 | **uint64**  | 64-bit unsigned integer                                                                                                             | 0 ve (2^64) değerleri arasında yer alır                                               |
 | **int**     | Hem int hem de uint, 32 veya 64 bit olmak üzere aynı boyutu içerir.                                                                 |                                                                                       |
@@ -114,26 +110,22 @@ Hafızada kapladığı yere ve oluşturulma usullerine göre `int` veri tipleri 
  32 bit , 64 bit veri tiplerinin mevcut olmasının temel sebebi tutulacak verinin sistemde kaplayacağı yeri düzenlemek içindir.
 {{</hint>}}
 
-**Birden çok veri tipinin olması sistem hafızasında kaplanacak yer sorunu ile ilgilidir.** Milyonlarca sayıdan oluşan bir veri setinin olduğunu düşünelim. Bu sayıların ise 1 ile 1000 arasında yer aldığını düşünelim. Eğer sisteme int16 ( 16 bit tamsayı ) veri tipinde veri girileceğini belirtmez isek sistem bu veri tipleri için int64 (64 bit tamsayı ) imiş gibi muamele edip her bir sayı için 2^64 'lük bir yer ayıracaktır. Böylece yapılan işlemler için ayrılan hafıza muazzam boyutlarda artacaktır. 
+Birden çok veri tipinin olması sistem hafızasında kaplanacak yer sorunu ile ilgilidir.Milyonlarca sayıdan oluşan bir veri setinin olduğunu düşünelim. Bu sayıların ise 1 ile 1000 arasında yer aldığını düşünelim. Eğer sisteme int16 ( 16 bit tamsayı ) veri tipinde veri girileceğini belirtmez isek sistem bu veri tipleri için int64 (64 bit tamsayı ) imiş gibi muamele edip her bir sayı için 2^64 'lük bir yer ayıracaktır. Böylece yapılan işlemler için ayrılan hafıza muazzam boyutlarda artacaktır.
 
+### Float (Ondalık)
 
-### Float (Ondalık) 
-
-Virgül ya da nokta ile ayrılmış ondalıklı değerleri ifade eder. 
-`int` ifadelerinde olduğu gibi `float` ifadelerde de hafızada kapladığı yere bakılarak bir seçim yapılır. 
-
+Virgül ya da nokta ile ayrılmış ondalıklı değerleri ifade eder.
+`int` ifadelerinde olduğu gibi `float` ifadelerde de hafızada kapladığı yere bakılarak bir seçim yapılır.
 
 ```go
 var sicaklik float32 = 33.25
 ```
 
-Diğer bir tanımlama ise şu şekilde yapılabilir. 
-
+Diğer bir tanımlama ise şu şekilde yapılabilir.
 
 ```go
 sicaklik := 33.25 
 ```
-
 
 Veri tipi tanımlaması aşağıdaki tabloya göre belirlenir.
 
@@ -142,82 +134,80 @@ Veri tipi tanımlaması aşağıdaki tabloya göre belirlenir.
 | float32   | 32-bit IEEE 754 floating-point number | İşaretli bir 32 bit tamsayı değişkeni maksimum 231 − 1 = 2,147,483,647 değerine sahipken, bir IEEE 754 32 bitlik taban-2 kayan noktalı değişkenin maksimum değeri (2 − 2−23) × 2127 ≈ 3.4028235 × 1038 . |  |
 | float64   | 64-bit IEEE 754 floating-point number |                                                                                                                                                                                                          |  |
 
-
 Float ifadelere ait bir örnek aşağıda yer almaktadır.
 
 ```go
 package main
+
 import "fmt"
 
 func main() {
-	//float verilerin tanımlanması
-	a := 20.45
-	b := 34.89
-	//Cikartma islemi
-	c := b-a
-	// Sonuc Görüntülemesi
-	fmt.Printf("Result is: %f", c)
-	// Vier türünün görüntülenmesi 
-	fmt.Printf("\nThe type of c is : %T", c)
+
+ //float verilerin tanımlanması
+ a := 20.45
+ b := 34.89
+
+ //Cikartma islemi
+ c := b - a
+
+ // Sonuc Görüntülemesi
+ fmt.Printf("Result is: %f", c)
+
+ // Vier türünün görüntülenmesi
+ fmt.Printf("\nThe type of c is : %T", c)
 }
 ```
 
 Örneğimizde `a` ve `b` olmak üzere iki adet `float` değişken tanımlanmıştır. İki değere de `float64` atanmıştır.
 
-
 {{<hint warning>}}
 **HATIRLATMA:**
-Eğer float ifade tanımlanırken bir veri tipi seçilmeden tanımlama yapılırsa GO otomatik olarak float64 seçimi yapar. 
+Eğer float ifade tanımlanırken 32bit,64bit vs. seçilmeden tanımlama yapılırsa GO otomatik olarak float64 seçimi yapar.
 {{</hint>}}
 
--------------------------------
+-------------------------
 
-###  String (Metin)
+### String (Metin)
 
 String veri türü metin verilerinin bir dize olarak tutulduğu veri tipidir. Bu veriler baytlardan oluşur.
 
+`string` ifadeler aşağıdaki şekilde tanımlanır.
 
-`string` ifadeler aşağıdaki şekilde tanımlanır. 
-
-```go 
+```go
 var degiskenAdi string = "metin ifadesi"
 ```
 
 ikinci bir tanımlama yöntemi ise aşağıdaki şekildedir.
 
-```go 
+```go
 degiskenAdi := "metin ifadesi"
 ```
 
 Şimdi bir uygulama örneği ile devam edelim.
 
 ```go
-
 package main
 
 import "fmt"
 
 func main() {
+ stringIfadesi := "GOKAYBURUC.DEV"
 
-stringIfadesi := "GOKAYBURUC.DEV"
-	
-// String ifadesinin uzunluğunun görüntülenmesi
-fmt.Printf("Length of the string is:%d",
-								len(stringIfadesi))
-	
-// String ifadesinin görüntülenmesi
-fmt.Printf("\nString is: %s", stringIfadesi)
-	
-// String ifadesinin veri türünün görüntülenmesi 
-fmt.Printf("\nType of str is: %T", stringIfadesi)
+ // String ifadesinin uzunluğunun görüntülenmesi
+ fmt.Printf("String ifadesinin uzunlugu:%d", len(stringIfadesi))
+
+ // String ifadesinin görüntülenmesi
+ fmt.Printf("String ifadesi: %s", stringIfadesi)
+
+ // String ifadesinin veri türünün görüntülenmesi
+ fmt.Printf("String ifadesinin tipi: %T", stringIfadesi)
 }
 
 ```
 
+### Boolean (Mantıksal)
 
-### Boolean (Mantıksal) 
-
-Bir veri tipinin mantıksal değerler olan `true` ya da `false` döndürdüğü ifadelerdir.  Bir koşullu işlemin sonucu bilgisayar tarafından geçerli olduğu noktada `true` geçersiz olduğu noktada ise `false` değerini döndürür. 
+Bir veri tipinin mantıksal değerler olan `true` ya da `false` döndürdüğü ifadelerdir.  Bir koşullu işlemin sonucu bilgisayar tarafından geçerli olduğu noktada `true` geçersiz olduğu noktada ise `false` değerini döndürür.
 
 | Veri Tipi | Açıklama                                            |
 | --------- | --------------------------------------------------- |
@@ -226,56 +216,99 @@ Bir veri tipinin mantıksal değerler olan `true` ya da `false` döndürdüğü 
 
 ----------------------------------------------------
 
+Atama yöntemi :
+
+```go
+var ehliyetMevcut = true 
+```
+
+veya
+
+```go
+ehliyetMevcut := false 
+```
+
+şeklindedir.
+
 #### Boolean Uygulaması
+
+`true` ve `false` degerleri atanmış degiskenlere ait örnek aşağıda yer almaktadır.
+
 ```go
 package main 
-
 import "fmt"
 
 func main(){
 
-	var a = 25
-	var b = 45
+ var a = 25
+ var b = 45
 
-	a=25
-	b=45
+ a=25
+ b=45
 
-	//mantıksal sorgu 
-	sorguBir := (a > b) 
-	sorguİki := (a < b) 
-	sorguUc := (a == b) 
-	sorguDort := (a != b)
+ //mantıksal sorgu  operatörleri 
+ sorguBir := (a > b) // a büyüktür b 
+ sorguİki := (a < b) // a kücüktür b 
+ sorguUc := (a == b) // a eşittir b 
+ sorguDort := (a != b) // a eşit değildir b 
 
-	fmt.Println(sorguBir)
-	fmt.Println(sorguİki)
-	fmt.Println(sorguUc)
-	fmt.Println(sorguDort)
+ fmt.Println(sorguBir)
+ fmt.Println(sorguİki)
+ fmt.Println(sorguUc)
+ fmt.Println(sorguDort)
 
 
-	// Deger ataması
-	var ehliyet bool = true
-	var ruhsat bool = false
+ // Deger ataması
+ var ehliyet bool = true
+ var ruhsat bool = false
 
-	fmt.Printf("Ehliyet : %v\nRuhsat : %v \n", ehliyet,ruhsat)
+ fmt.Printf("Ehliyet : %v\nRuhsat : %v \n", ehliyet,ruhsat)
 }
 
 ```
 
+Yukarıdaki örneğimizde mantıksal sorgu operatörleri kullanılmıştır.
 
-### Complex ( Karmaşık ) 
+Bu operatörler:
 
-Matematik gösterimi i ve j ye bağlı olan ve iki boyutlu bir analitik düzlem üstünde gösterilen sayılar için sistem hafızasında tutulan veri tipidir. 
+- Eşitlik ( == )
+- Eşit Olmama (!=)
+- Büyüklük ( > )
+- Küçüklük ( < )
+- Büyük ve Eşitlik ( >= )
+- Küçük ve Eşitlik ( <= )
+
+olarak sıralanabilir.
+
+{{<hint warning>}}
+Bu sorguların sonuçları `true` ve `false` olarak döndürülür.
+{{</hint>}}
+
+Bizim örneğimizde :
+
+```go
+ //mantıksal sorgu  operatörleri 
+ sorguBir := (a > b) // a büyüktür b 
+ sorguİki := (a < b) // a kücüktür b 
+ sorguUc := (a == b) // a eşittir b 
+ sorguDort := (a != b) // a eşit değildir b 
+```
+
+mantıksal sorguları mevcuttur ve bu sorgular önermenin doğruluğuna bağlı olarak `true` ve `false` olarak değer döndüreceklerdir. Misal örneğimizde a sayısı 25 ve b sayısı 45 olduğu için ` a < b `  önermesi `true` ve ` a > b ` önermesi `false` döndürecektir.
+
+### Complex ( Karmaşık )
+
+Matematik gösterimi i ve j ye bağlı olan ve iki boyutlu bir analitik düzlem üstünde gösterilen sayılar için sistem hafızasında tutulan veri tipidir.
 
 Komplek Sayi  `j + Xi`  seklinde yazılır. Yani sayının bir imajiner bir de reel kısmı mevcuttur. Sonuçlarımız da bu şekilde döndürülecektir.
 
-
 Yazım şekili
 
-```go 
+```go
 var degiskenAdi complex64 = complex(2,15)
 ```
 
-ikinci yazım şekli 
+ikinci yazım şekli
 
 ```go
 var degiskenAdi := complex(2,15)
@@ -287,7 +320,6 @@ Komplex sayı veri tipine ait tablo aşağıda yer almaktadır.
 | ---------- | ------------------------------------------------------------------- |
 | complex64  | `float32` değerini reel (`j`) ve imajiner (`i`) kısımda tutan deger |
 | complex128 | `float64` değerini reel (`j`) ve imajiner(`i`) kısımda tutan değer  |
-
 
 Aşağıda açıklama örneğimiz yer almaktadır.
 
@@ -303,19 +335,36 @@ func main() {
    var a complex128 = complex(6, 2)
    var b complex64 = complex(9, 2)
 
-	//
+ // ilk cıktılar
    fmt.Println(a)
    fmt.Println(b)
     
    // Display the type
   fmt.Printf("The type of a is %T and "+
-            "the type of b is %T", a, b)
+            "the type of b is %T ", a, b)
 }
 
 ```
 
+Örneğimizde a ve b olarak iki adet kompleks sayı tanımladık.
 
-## Kaynakça 
-1.  [https://www.geeksforgeeks.org/data-types-in-go/](https://www.geeksforgeeks.org/data-types-in-go/)
+```go
+  // kompleks sayı tanımlamaları
+   var a complex128 = complex(6, 2)
+   var b complex64 = complex(9, 2)
+
+```
+
+Kodu çalıştırdığımızda ekran çıktılarımız aşağıdaki gibi olacaktır.
+
+```bash
+(6+2i)
+(9+2i)
+The type of a is complex128 and the type of b is complex64%   
+```
+
+## Kaynakça
+
+1. [https://www.geeksforgeeks.org/data-types-in-go/](https://www.geeksforgeeks.org/data-types-in-go/)
 2. [https://go.dev/tour/basics/11](https://go.dev/tour/basics/11)
 3. [https://www.programiz.com/golang/data-types](https://www.programiz.com/golang/data-types)

@@ -1,6 +1,6 @@
 ---
 title: " Kapalı Fonksiyonlar - Closures"
-weight: 6
+weight: 30
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
