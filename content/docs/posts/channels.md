@@ -1,6 +1,6 @@
 ---
 title: "Channels - Kanallar"
-weight: 8
+weight: 32
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -9,3 +9,4 @@ weight: 8
 # bookSearchExclude: false
 ---
 
+# Channels 
